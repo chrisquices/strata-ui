@@ -16,7 +16,7 @@ defineProps({
       :align="align"
       :side-offset="sideOffset"
       style="transform-origin: var(--reka-menubar-content-transform-origin);"
-      class="strata-menu-pop z-popover min-w-44 max-w-xs max-h-[var(--reka-menubar-content-available-height)] overflow-y-auto rounded-large border border-border bg-surface p-1 shadow-panel focus-visible:outline-none"
+      class="strata-ui-menu-pop z-popover min-w-44 max-w-xs max-h-[var(--reka-menubar-content-available-height)] overflow-y-auto rounded-large border border-border bg-surface p-1 shadow-panel focus-visible:outline-none"
     >
       <slot />
     </MenubarContent>

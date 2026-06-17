@@ -33,7 +33,7 @@ const effectiveSize = computed(() => (groupContext ? (groupContext.size ?? props
 const isInvalid = computed(() => props.invalid || !!props.error || !!groupContext?.invalid);
 
 // Link the error message to the input for screen readers, preserving any caller-supplied one.
-const errorId = `strata-input-error-${++uid}`;
+const errorId = `strata-ui-input-error-${++uid}`;
 const describedById = computed(() => {
   const ids = [];
   if (attrs['aria-describedby']) ids.push(attrs['aria-describedby']);

@@ -13,7 +13,7 @@ import ComponentItemSection from '@app/component/ComponentItemSection.vue';
 import ComponentItemSectionDescription from '@app/component/ComponentItemSectionDescription.vue';
 import ComponentItemSectionExample from '@app/component/ComponentItemSectionExample.vue';
 
-const path = '/Users/ada/Projects/strata/src/components/ui/TruncateMiddle/TruncateMiddle.vue';
+const path = '/Users/ada/Projects/strata-ui/src/components/ui/TruncateMiddle/TruncateMiddle.vue';
 const width = ref(320);
 </script>
 

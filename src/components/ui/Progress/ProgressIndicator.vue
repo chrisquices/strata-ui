@@ -11,7 +11,7 @@ const percentage = computed(() => progress.percentage);
     class="progress-indicator h-full rounded-full bg-foreground transition-all duration-slow"
     :style="{ '--progress-width': percentage + '%' }"
   ></div>
-  <div v-else class="strata-progress-indeterminate h-full w-1/3 rounded-full bg-foreground opacity-60"></div>
+  <div v-else class="strata-ui-progress-indeterminate h-full w-1/3 rounded-full bg-foreground opacity-60"></div>
 </template>
 
 <style scoped>
@@ -21,7 +21,7 @@ const percentage = computed(() => progress.percentage);
 
 /* Indeterminate sweep. Co-located here — only this component uses it. Deliberately NOT in a
    reduced-motion block: like the spinner, it is essential loading feedback. */
-@keyframes strata-progress-indeterminate {
+@keyframes strata-ui-progress-indeterminate {
   from {
     translate: -110% 0;
   }
@@ -29,7 +29,7 @@ const percentage = computed(() => progress.percentage);
     translate: 320% 0;
   }
 }
-.strata-progress-indeterminate {
-  animation: strata-progress-indeterminate 1.4s ease-in-out infinite;
+.strata-ui-progress-indeterminate {
+  animation: strata-ui-progress-indeterminate 1.4s ease-in-out infinite;
 }
 </style>

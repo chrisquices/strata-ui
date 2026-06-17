@@ -46,14 +46,14 @@ const PLACEMENT: Record<ToastPosition, string> = {
   'bottom-center': 'bottom-0 left-1/2 -translate-x-1/2 items-center',
   'bottom-right': 'bottom-0 right-0 items-end',
 };
-// Slide/animation axis per edge (drives the strata-toast--* keyframes in app.css).
+// Slide/animation axis per edge (drives the strata-ui-toast--* keyframes in app.css).
 const AXIS: Record<ToastPosition, string> = {
-  'top-left': 'strata-toast--left',
-  'top-center': 'strata-toast--up',
-  'top-right': 'strata-toast--right',
-  'bottom-left': 'strata-toast--left',
-  'bottom-center': 'strata-toast--down',
-  'bottom-right': 'strata-toast--right',
+  'top-left': 'strata-ui-toast--left',
+  'top-center': 'strata-ui-toast--up',
+  'top-right': 'strata-ui-toast--right',
+  'bottom-left': 'strata-ui-toast--left',
+  'bottom-center': 'strata-ui-toast--down',
+  'bottom-right': 'strata-ui-toast--right',
 };
 const SWIPE: Record<ToastPosition, SwipeDirection> = {
   'top-left': 'left',
@@ -129,37 +129,37 @@ function onOpenChange(id: number, open: boolean) {
 /* Slide in/out per viewport edge + swipe-follow, keyed off reka's data-state/data-swipe.
    Co-located here — only this component uses these. Non-scoped: the classes sit on reka's
    ToastRoot. */
-@keyframes strata-toast-in-right { from { opacity: 0; transform: translateX(100%); } }
-@keyframes strata-toast-out-right { to { opacity: 0; transform: translateX(100%); } }
-@keyframes strata-toast-in-left { from { opacity: 0; transform: translateX(-100%); } }
-@keyframes strata-toast-out-left { to { opacity: 0; transform: translateX(-100%); } }
-@keyframes strata-toast-in-up { from { opacity: 0; transform: translateY(-100%); } }
-@keyframes strata-toast-out-up { to { opacity: 0; transform: translateY(-100%); } }
-@keyframes strata-toast-in-down { from { opacity: 0; transform: translateY(100%); } }
-@keyframes strata-toast-out-down { to { opacity: 0; transform: translateY(100%); } }
+@keyframes strata-ui-toast-in-right { from { opacity: 0; transform: translateX(100%); } }
+@keyframes strata-ui-toast-out-right { to { opacity: 0; transform: translateX(100%); } }
+@keyframes strata-ui-toast-in-left { from { opacity: 0; transform: translateX(-100%); } }
+@keyframes strata-ui-toast-out-left { to { opacity: 0; transform: translateX(-100%); } }
+@keyframes strata-ui-toast-in-up { from { opacity: 0; transform: translateY(-100%); } }
+@keyframes strata-ui-toast-out-up { to { opacity: 0; transform: translateY(-100%); } }
+@keyframes strata-ui-toast-in-down { from { opacity: 0; transform: translateY(100%); } }
+@keyframes strata-ui-toast-out-down { to { opacity: 0; transform: translateY(100%); } }
 
-.strata-toast--right[data-state='open'] { animation: strata-toast-in-right var(--duration-slow) cubic-bezier(0.16, 1, 0.3, 1); }
-.strata-toast--right[data-state='closed'],
-.strata-toast--right[data-swipe='end'] { animation: strata-toast-out-right var(--duration-fast) ease-in forwards; }
-.strata-toast--left[data-state='open'] { animation: strata-toast-in-left var(--duration-slow) cubic-bezier(0.16, 1, 0.3, 1); }
-.strata-toast--left[data-state='closed'],
-.strata-toast--left[data-swipe='end'] { animation: strata-toast-out-left var(--duration-fast) ease-in forwards; }
-.strata-toast--up[data-state='open'] { animation: strata-toast-in-up var(--duration-slow) cubic-bezier(0.16, 1, 0.3, 1); }
-.strata-toast--up[data-state='closed'],
-.strata-toast--up[data-swipe='end'] { animation: strata-toast-out-up var(--duration-fast) ease-in forwards; }
-.strata-toast--down[data-state='open'] { animation: strata-toast-in-down var(--duration-slow) cubic-bezier(0.16, 1, 0.3, 1); }
-.strata-toast--down[data-state='closed'],
-.strata-toast--down[data-swipe='end'] { animation: strata-toast-out-down var(--duration-fast) ease-in forwards; }
+.strata-ui-toast--right[data-state='open'] { animation: strata-ui-toast-in-right var(--duration-slow) cubic-bezier(0.16, 1, 0.3, 1); }
+.strata-ui-toast--right[data-state='closed'],
+.strata-ui-toast--right[data-swipe='end'] { animation: strata-ui-toast-out-right var(--duration-fast) ease-in forwards; }
+.strata-ui-toast--left[data-state='open'] { animation: strata-ui-toast-in-left var(--duration-slow) cubic-bezier(0.16, 1, 0.3, 1); }
+.strata-ui-toast--left[data-state='closed'],
+.strata-ui-toast--left[data-swipe='end'] { animation: strata-ui-toast-out-left var(--duration-fast) ease-in forwards; }
+.strata-ui-toast--up[data-state='open'] { animation: strata-ui-toast-in-up var(--duration-slow) cubic-bezier(0.16, 1, 0.3, 1); }
+.strata-ui-toast--up[data-state='closed'],
+.strata-ui-toast--up[data-swipe='end'] { animation: strata-ui-toast-out-up var(--duration-fast) ease-in forwards; }
+.strata-ui-toast--down[data-state='open'] { animation: strata-ui-toast-in-down var(--duration-slow) cubic-bezier(0.16, 1, 0.3, 1); }
+.strata-ui-toast--down[data-state='closed'],
+.strata-ui-toast--down[data-swipe='end'] { animation: strata-ui-toast-out-down var(--duration-fast) ease-in forwards; }
 
 /* Swipe-follow: horizontal edges track X, vertical edges track Y */
-.strata-toast--right[data-swipe='move'],
-.strata-toast--left[data-swipe='move'] { transform: translateX(var(--reka-toast-swipe-move-x, 0)); }
-.strata-toast--up[data-swipe='move'],
-.strata-toast--down[data-swipe='move'] { transform: translateY(var(--reka-toast-swipe-move-y, 0)); }
+.strata-ui-toast--right[data-swipe='move'],
+.strata-ui-toast--left[data-swipe='move'] { transform: translateX(var(--reka-toast-swipe-move-x, 0)); }
+.strata-ui-toast--up[data-swipe='move'],
+.strata-ui-toast--down[data-swipe='move'] { transform: translateY(var(--reka-toast-swipe-move-y, 0)); }
 
 @media (prefers-reduced-motion: reduce) {
-  [class*='strata-toast--'][data-state='open'],
-  [class*='strata-toast--'][data-state='closed'] {
+  [class*='strata-ui-toast--'][data-state='open'],
+  [class*='strata-ui-toast--'][data-state='closed'] {
     animation: none;
   }
 }

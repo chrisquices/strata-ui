@@ -25,7 +25,7 @@ const isLink = computed(() => !!props.href && !hasSubmenu.value);
 const isButton = computed(() => !isLink.value && !hasSubmenu.value);
 
 const base =
-  'strata-sidebar-menu-item group/sidebar-menu-item relative flex h-control w-full cursor-pointer items-center gap-2 px-4 text-left text-sm ' +
+  'strata-ui-sidebar-menu-item group/sidebar-menu-item relative flex h-control w-full cursor-pointer items-center gap-2 px-4 text-left text-sm ' +
   'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-foreground/30 ' +
   'group-data-[collapsed]/sidebar:pl-5 group-data-[collapsed]/sidebar:pr-0 group-data-[collapsed]/sidebar:gap-0';
 const stateClass = computed(() =>
@@ -86,13 +86,13 @@ const disabledClass = computed(() => (props.disabled ? 'pointer-events-none curs
 </template>
 
 <style>
-.strata-sidebar-menu-item {
+.strata-ui-sidebar-menu-item {
   transition-property: color, background-color, gap, padding-inline-start, padding-inline-end;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: var(--duration-fast, 150ms), var(--duration-fast, 150ms), 300ms, 300ms, 300ms;
 }
-.strata-sidebar-menu[data-align-icons] > li > .strata-sidebar-menu-item:not(:has(> svg:first-child))::before,
-.strata-sidebar-menu-sub[data-align-icons] > li > .strata-sidebar-menu-item:not(:has(> svg:first-child))::before {
+.strata-ui-sidebar-menu[data-align-icons] > li > .strata-ui-sidebar-menu-item:not(:has(> svg:first-child))::before,
+.strata-ui-sidebar-menu-sub[data-align-icons] > li > .strata-ui-sidebar-menu-item:not(:has(> svg:first-child))::before {
   content: '';
   width: var(--spacing-icon-medium);
   height: var(--spacing-icon-medium);

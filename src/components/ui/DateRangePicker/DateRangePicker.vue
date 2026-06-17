@@ -128,7 +128,7 @@ const segmentClass = 'rounded px-0.5 tabular-nums transition-colors focus:bg-for
       <PopoverContent
         :side-offset="6"
         :aria-label="closeLabel"
-        class="strata-menu-pop z-popover max-w-[calc(100vw-2rem)] overflow-x-auto rounded-large border border-border bg-surface shadow-panel focus-visible:outline-none"
+        class="strata-ui-menu-pop z-popover max-w-[calc(100vw-2rem)] overflow-x-auto rounded-large border border-border bg-surface shadow-panel focus-visible:outline-none"
       >
         <RangeCalendar
           v-model="model"

@@ -15,7 +15,7 @@ defineProps({
       v-bind="$attrs"
       :side="side"
       :side-offset="sideOffset"
-      class="strata-overlay-fade pointer-events-none z-tooltip max-w-64 rounded-medium bg-foreground px-2 py-1 text-xs text-pretty text-background shadow-panel"
+      class="strata-ui-overlay-fade pointer-events-none z-tooltip max-w-64 rounded-medium bg-foreground px-2 py-1 text-xs text-pretty text-background shadow-panel"
     >
       <slot />
     </TooltipContent>

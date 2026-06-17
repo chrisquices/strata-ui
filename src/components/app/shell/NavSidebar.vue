@@ -100,7 +100,7 @@ function navigate(id: string, e: MouseEvent) {
   <Sidebar
       aria-label="components sidebar"
       side="left"
-      class="strata-chrome z-sidebar md:w-72 transition-[width] duration-base"
+      class="strata-ui-chrome z-sidebar md:w-72 transition-[width] duration-base"
   >
     <SidebarSection>
       <SidebarSectionCaption>Components</SidebarSectionCaption>

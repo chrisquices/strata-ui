@@ -86,7 +86,7 @@ const itemClass = 'flex h-control w-full cursor-default items-center gap-2 round
         :side="side"
         :side-offset="sideOffset"
         position="popper"
-        class="strata-menu-pop z-popover max-h-60 min-w-[var(--reka-combobox-trigger-width,8rem)] overflow-hidden rounded-large border border-border bg-surface shadow-panel focus-visible:outline-none"
+        class="strata-ui-menu-pop z-popover max-h-60 min-w-[var(--reka-combobox-trigger-width,8rem)] overflow-hidden rounded-large border border-border bg-surface shadow-panel focus-visible:outline-none"
       >
         <ComboboxViewport class="max-h-52 overflow-y-auto p-1">
           <ComboboxEmpty class="px-2 py-4 text-center text-xs text-faint">{{ emptyText }}</ComboboxEmpty>

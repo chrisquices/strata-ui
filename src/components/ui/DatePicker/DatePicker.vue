@@ -84,7 +84,7 @@ const stateClass = computed(() =>
 
     <DatePickerContent
       :side-offset="6"
-      class="strata-menu-pop z-popover rounded-large border border-border bg-surface shadow-panel focus-visible:outline-none"
+      class="strata-ui-menu-pop z-popover rounded-large border border-border bg-surface shadow-panel focus-visible:outline-none"
     >
       <DatePickerArrow class="fill-surface stroke-border" />
       <Calendar v-model="model" :min-value="minValue" :max-value="maxValue" :disabled="disabled" :readonly="readonly" :locale="locale" class="border-0 bg-transparent" />

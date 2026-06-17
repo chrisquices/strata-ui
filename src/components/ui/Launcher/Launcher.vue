@@ -31,7 +31,7 @@ function focusSearch() {
   <DialogRoot v-model:open="openProxy">
     <DialogPortal>
       <DialogContent
-        class="strata-overlay-fade fixed inset-0 z-modal flex flex-col items-center gap-10 overflow-y-auto bg-overlay/80 px-5 py-20 backdrop-blur-xl focus-visible:outline-none md:px-8"
+        class="strata-ui-overlay-fade fixed inset-0 z-modal flex flex-col items-center gap-10 overflow-y-auto bg-overlay/80 px-5 py-20 backdrop-blur-xl focus-visible:outline-none md:px-8"
         @open-auto-focus.prevent="focusSearch"
       >
         <DialogTitle class="sr-only">App launcher</DialogTitle>
@@ -47,7 +47,7 @@ function focusSearch() {
           />
         </div>
 
-        <div class="strata-menu-pop w-full max-w-3xl">
+        <div class="strata-ui-menu-pop w-full max-w-3xl">
           <slot />
         </div>
       </DialogContent>

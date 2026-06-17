@@ -30,7 +30,7 @@ import ComponentItemSectionExample from '@app/component/ComponentItemSectionExam
           <Topbar :sticky="false">
             <TopbarStart>
               <Hexagon class="size-icon-large text-foreground" />
-              <TopbarTitle>Strata</TopbarTitle>
+              <TopbarTitle>Strata UI</TopbarTitle>
             </TopbarStart>
             <TopbarEnd>
               <Button variant="muted">Docs</Button>

@@ -9,7 +9,7 @@ import NavSidebar from './shell/NavSidebar.vue';
 </script>
 
 <template>
-  <div class="strata-shell flex h-screen flex-col overflow-hidden bg-background text-foreground">
+  <div class="strata-ui-shell flex h-screen flex-col overflow-hidden bg-background text-foreground">
     <Topbar />
     <div class="relative mx-auto flex min-h-0 w-full max-w-7xl flex-1">
       <NavSidebar />

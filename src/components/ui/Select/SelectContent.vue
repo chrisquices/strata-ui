@@ -17,7 +17,7 @@ defineProps({
       :side="side"
       :side-offset="sideOffset"
       position="popper"
-      class="strata-menu-pop z-popover max-h-60 min-w-[var(--reka-select-trigger-width,8rem)] overflow-hidden rounded-large border border-border bg-surface shadow-panel focus-visible:outline-none"
+      class="strata-ui-menu-pop z-popover max-h-60 min-w-[var(--reka-select-trigger-width,8rem)] overflow-hidden rounded-large border border-border bg-surface shadow-panel focus-visible:outline-none"
     >
       <SelectViewport class="max-h-52 overflow-y-auto p-1"><slot /></SelectViewport>
     </SelectContent>

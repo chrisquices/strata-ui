@@ -11,11 +11,11 @@ defineProps({
 
 <template>
   <DialogPortal>
-    <DialogOverlay class="strata-overlay-fade fixed inset-0 z-modal bg-overlay/60 backdrop-blur-sm"/>
+    <DialogOverlay class="strata-ui-overlay-fade fixed inset-0 z-modal bg-overlay/60 backdrop-blur-sm"/>
     <!-- No disable-outside-pointer-events: a Dialog is dismissable by outside click (unlike AlertDialog). -->
     <DialogContent
         v-bind="$attrs"
-        class="strata-menu-pop fixed left-1/2 top-1/2 z-modal flex max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-lg -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden rounded-large border border-border bg-surface text-foreground shadow-overlay focus-visible:outline-none"
+        class="strata-ui-menu-pop fixed left-1/2 top-1/2 z-modal flex max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-lg -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden rounded-large border border-border bg-surface text-foreground shadow-overlay focus-visible:outline-none"
     >
       <slot/>
       <DialogClose

@@ -3,7 +3,7 @@ import {AccordionContent} from 'reka-ui';
 </script>
 
 <template>
-  <AccordionContent class="strata-accordion-content">
+  <AccordionContent class="strata-ui-accordion-content">
     <!-- Padding stays on the inner div; on the height-animated element it would stop the panel collapsing flush to 0. -->
     <div class="pb-3 text-sm text-muted">
       <slot/>
@@ -15,7 +15,7 @@ import {AccordionContent} from 'reka-ui';
 /* Height expand/collapse, keyed off reka's data-state. Co-located here — only this component
    uses it. Non-scoped: the class sits on reka's AccordionContent root, which a scope hash
    wouldn't tag. */
-@keyframes strata-accordion-down {
+@keyframes strata-ui-accordion-down {
   from {
     height: 0;
     overflow: hidden;
@@ -25,7 +25,7 @@ import {AccordionContent} from 'reka-ui';
     overflow: hidden;
   }
 }
-@keyframes strata-accordion-up {
+@keyframes strata-ui-accordion-up {
   from {
     height: var(--reka-accordion-content-height);
     overflow: hidden;
@@ -35,15 +35,15 @@ import {AccordionContent} from 'reka-ui';
     overflow: hidden;
   }
 }
-.strata-accordion-content[data-state='open'] {
-  animation: strata-accordion-down var(--duration-fast) ease-out;
+.strata-ui-accordion-content[data-state='open'] {
+  animation: strata-ui-accordion-down var(--duration-fast) ease-out;
 }
-.strata-accordion-content[data-state='closed'] {
-  animation: strata-accordion-up var(--duration-fast) ease-out;
+.strata-ui-accordion-content[data-state='closed'] {
+  animation: strata-ui-accordion-up var(--duration-fast) ease-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .strata-accordion-content[data-state='open'],
-  .strata-accordion-content[data-state='closed'] {
+  .strata-ui-accordion-content[data-state='open'],
+  .strata-ui-accordion-content[data-state='closed'] {
     animation: none;
   }
 }

@@ -4,7 +4,7 @@
 </div>
 
 
-<h1 align="center">Strata</h1>
+<h1 align="center">Strata UI</h1>
 
 <p align="center">
     A source-first Vue UI kit with reusable primitives for building application interfaces without package registry ceremony.<br />
@@ -28,17 +28,17 @@
 
 ## Overview
 
-Strata is a personal Vue interface kit meant to be copied into projects as source, not installed from a package registry. It contains foundational UI primitives and application shell examples.
+Strata UI is a personal Vue interface kit meant to be copied into projects as source, not installed from a package registry. It contains foundational UI primitives and application shell examples.
 
 The preferred consuming-project layout is:
 
 ```txt
 components/
-  strata-ui/  # Strata source, updated from GitHub
+  strata-ui/  # Strata UI source, updated from GitHub
   app/            # Project-owned wrappers, compositions, and custom UI
 ```
 
-The `strata-ui` directory should be treated as read-only project infrastructure. If a project needs a custom button, label, variant, or composition, build that in `components/app` by wrapping or composing Strata components.
+The `strata-ui` directory should be treated as read-only project infrastructure. If a project needs a custom button, label, variant, or composition, build that in `components/app` by wrapping or composing Strata UI components.
 
 ---
 
@@ -46,24 +46,24 @@ The `strata-ui` directory should be treated as read-only project infrastructure.
 
 - **Git**
 - **Vue** project that can consume Vue single-file components
-- **Tailwind CSS** if the consuming project wants to use the Strata theme tokens and classes
+- **Tailwind CSS** if the consuming project wants to use the Strata UI theme tokens and classes
 
-For developing Strata itself, no global package install is required. The repository includes its own offline build pipeline under `deps/`.
+For developing Strata UI itself, no global package install is required. The repository includes its own offline build pipeline under `deps/`.
 
 ---
 
 ## Installation
 
-Add Strata to a project as a Git submodule:
+Add Strata UI to a project as a Git submodule:
 
 ```bash
-git submodule add -b main https://github.com/<you>/strata.git components/strata-ui
+git submodule add -b main https://github.com/<you>/strata-ui.git components/strata-ui
 ```
 
 If the repository uses `master` instead:
 
 ```bash
-git submodule add -b master https://github.com/<you>/strata.git components/strata-ui
+git submodule add -b master https://github.com/<you>/strata-ui.git components/strata-ui
 ```
 
 Project-specific components should live beside it:
@@ -81,7 +81,7 @@ components/
 
 ## Updating
 
-Pull the latest Strata source into the consuming project:
+Pull the latest Strata UI source into the consuming project:
 
 ```bash
 git submodule update --remote components/strata-ui
@@ -91,10 +91,10 @@ Then commit the updated submodule pointer in the consuming project:
 
 ```bash
 git add components/strata-ui
-git commit -m "Update Strata"
+git commit -m "Update Strata UI"
 ```
 
-This is not semver or package management. It is just Git remembering which Strata snapshot the project currently uses.
+This is not semver or package management. It is just Git remembering which Strata UI snapshot the project currently uses.
 
 ---
 
@@ -124,7 +124,7 @@ import Button from "../strata-ui/src/components/ui/Button/Button.vue";
 </template>
 ```
 
-If a change belongs in every future project, make it in the Strata repository and update the submodule where needed.
+If a change belongs in every future project, make it in the Strata UI repository and update the submodule where needed.
 
 ---
 
@@ -172,7 +172,7 @@ The build writes self-contained static output to `dist/`.
 
 ## Philosophy
 
-Strata is intentionally source-first:
+Strata UI is intentionally source-first:
 
 - No npm publishing
 - No package registry workflow

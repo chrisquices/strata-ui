@@ -116,7 +116,7 @@ const cellTrigger = 'flex h-10 flex-1 cursor-pointer items-center justify-center
       <PopoverContent
         :side-offset="6"
         :aria-label="closeLabel"
-        class="strata-menu-pop z-popover rounded-large border border-border bg-surface shadow-panel focus-visible:outline-none"
+        class="strata-ui-menu-pop z-popover rounded-large border border-border bg-surface shadow-panel focus-visible:outline-none"
       >
         <MonthPickerRoot
           v-slot="{ grid }"

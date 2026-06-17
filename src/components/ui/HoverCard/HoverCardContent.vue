@@ -18,7 +18,7 @@ defineProps({
       :align="align"
       :side-offset="sideOffset"
       style="transform-origin: var(--reka-hover-card-content-transform-origin);"
-      class="strata-menu-pop z-popover rounded-large border border-border bg-surface shadow-panel focus-visible:outline-none"
+      class="strata-ui-menu-pop z-popover rounded-large border border-border bg-surface shadow-panel focus-visible:outline-none"
     >
       <slot />
     </HoverCardContent>

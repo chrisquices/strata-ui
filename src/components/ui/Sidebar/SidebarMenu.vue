@@ -5,7 +5,7 @@ defineProps({
 </script>
 
 <template>
-  <ul class="strata-sidebar-menu flex flex-col" :data-align-icons="alignIcons || undefined">
+  <ul class="strata-ui-sidebar-menu flex flex-col" :data-align-icons="alignIcons || undefined">
     <slot />
   </ul>
 </template>

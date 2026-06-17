@@ -6,7 +6,7 @@ const contentId = inject('collapsibleContentId', undefined);
 </script>
 
 <template>
-  <CollapsibleContent class="strata-collapsible">
+  <CollapsibleContent class="strata-ui-collapsible">
     <div :id="contentId">
       <slot/>
     </div>
@@ -17,7 +17,7 @@ const contentId = inject('collapsibleContentId', undefined);
 /* Height expand/collapse, keyed off reka's data-state. Co-located here — only this component
    uses it. Non-scoped: the class sits on reka's CollapsibleContent root, which a scope hash
    wouldn't tag. */
-@keyframes strata-collapsible-down {
+@keyframes strata-ui-collapsible-down {
   from {
     height: 0;
     overflow: hidden;
@@ -27,7 +27,7 @@ const contentId = inject('collapsibleContentId', undefined);
     overflow: hidden;
   }
 }
-@keyframes strata-collapsible-up {
+@keyframes strata-ui-collapsible-up {
   from {
     height: var(--reka-collapsible-content-height);
     overflow: hidden;
@@ -37,15 +37,15 @@ const contentId = inject('collapsibleContentId', undefined);
     overflow: hidden;
   }
 }
-.strata-collapsible[data-state='open'] {
-  animation: strata-collapsible-down var(--duration-fast) ease-out;
+.strata-ui-collapsible[data-state='open'] {
+  animation: strata-ui-collapsible-down var(--duration-fast) ease-out;
 }
-.strata-collapsible[data-state='closed'] {
-  animation: strata-collapsible-up var(--duration-fast) ease-out;
+.strata-ui-collapsible[data-state='closed'] {
+  animation: strata-ui-collapsible-up var(--duration-fast) ease-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .strata-collapsible[data-state='open'],
-  .strata-collapsible[data-state='closed'] {
+  .strata-ui-collapsible[data-state='open'],
+  .strata-ui-collapsible[data-state='closed'] {
     animation: none;
   }
 }

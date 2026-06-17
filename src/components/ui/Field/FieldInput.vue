@@ -28,7 +28,7 @@ const field = inject('field', null);
 const isInvalid = computed(() => props.invalid || !!props.error);
 
 // Link the error message to the input for screen readers, preserving any caller-supplied one.
-const errorId = `strata-field-error-${++uid}`;
+const errorId = `strata-ui-field-error-${++uid}`;
 const describedById = computed(() => {
   const ids = [];
   if (attrs['aria-describedby']) ids.push(attrs['aria-describedby']);

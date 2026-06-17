@@ -37,7 +37,7 @@ onMounted(grow);
 watch(value, () => nextTick(grow));
 
 // Link the error message to the textarea for screen readers, preserving any caller-supplied one.
-const errorId = `strata-textarea-error-${++uid}`;
+const errorId = `strata-ui-textarea-error-${++uid}`;
 const describedById = computed(() => {
   const ids = [];
   if (attrs['aria-describedby']) ids.push(attrs['aria-describedby']);

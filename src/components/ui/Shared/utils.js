@@ -1,4 +1,4 @@
-// Shared formatting helpers for the Strata kit.
+// Shared formatting helpers for the Strata UI kit.
 //
 // FORMATTING ONLY. These functions take a value and return a display string —
 // no DOM, no component state, no side effects. The FileSize and RelativeTime

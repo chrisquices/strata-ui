@@ -49,7 +49,7 @@ walkOpen(props.data, 0);
     :get-children="getChildren"
     selection-behavior="replace"
   >
-    <TransitionGroup name="strata-tree-row" tag="div" class="flex flex-col">
+    <TransitionGroup name="strata-ui-tree-row" tag="div" class="flex flex-col">
       <TreeNode
         v-for="item in flattenItems"
         :key="item._id"
@@ -61,8 +61,8 @@ walkOpen(props.data, 0);
 </template>
 
 <style>
-.strata-tree-row-enter-active,
-.strata-tree-row-leave-active {
+.strata-ui-tree-row-enter-active,
+.strata-ui-tree-row-leave-active {
   max-height: var(--spacing-control);
   overflow: hidden;
   transition:
@@ -71,23 +71,23 @@ walkOpen(props.data, 0);
     transform var(--duration-base) ease-out;
 }
 
-.strata-tree-row-enter-from,
-.strata-tree-row-leave-to {
+.strata-ui-tree-row-enter-from,
+.strata-ui-tree-row-leave-to {
   max-height: 0;
   opacity: 0;
   transform: translateY(-0.25rem);
 }
 
-.strata-tree-row-enter-to,
-.strata-tree-row-leave-from {
+.strata-ui-tree-row-enter-to,
+.strata-ui-tree-row-leave-from {
   max-height: var(--spacing-control);
   opacity: 1;
   transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .strata-tree-row-enter-active,
-  .strata-tree-row-leave-active {
+  .strata-ui-tree-row-enter-active,
+  .strata-ui-tree-row-leave-active {
     transition: none;
   }
 }
