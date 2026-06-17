@@ -1,11 +1,11 @@
 import { createApp } from "vue";
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import App from "@app/App.vue";
 import { componentRoutes } from "./pages/components/routes";
 import ComponentsIndex from "./pages/components/Index.vue";
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes: [
     { path: "/", redirect: "/components" },
     { path: "/components", component: ComponentsIndex },

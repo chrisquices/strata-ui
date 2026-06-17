@@ -13,7 +13,7 @@ defineProps({
 <template>
   <SidebarHeader>
     <div class="flex items-center gap-3 min-w-0">
-      <BrandMark src="/assets/img/logo.png" alt="Strata UI logo" />
+      <BrandMark src="./assets/img/logo.png" alt="Strata UI logo" />
       <Caption tone="foreground" class="group-data-[collapsed]/sidebar:hidden">Strata UI</Caption>
     </div>
     <Button icon variant="muted" size="sm" aria-label="Close navigation" class="xl:hidden group-data-[collapsed]/sidebar:hidden" @click="onclose && onclose()">

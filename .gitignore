@@ -1,6 +1,5 @@
 .DS_Store
 .idea/
-dist/
 tmp/
 node_modules/
 settings.local.json

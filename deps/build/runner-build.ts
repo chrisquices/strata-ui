@@ -83,7 +83,7 @@ async function buildSelfContainedHtml(entrypoint: string, entryOutdir: string, c
 
 await rm(outdir, { recursive: true, force: true });
 
-const htmlOutputPath = await buildSelfContainedHtml(root + "src/index.html", outdir, "/app.css");
+const htmlOutputPath = await buildSelfContainedHtml(root + "src/index.html", outdir, "./app.css");
 
 // Compile one Tailwind entry. Used for the docs app.css and for each template's own app.css.
 async function compileCss(input: string, output: string) {
@@ -137,7 +137,7 @@ if (existsSync(templatesSource)) {
       console.warn(`Skipping template "${entry.name}": no index.html entrypoint`);
       continue;
     }
-    await buildSelfContainedHtml(templateEntrypoint, `${outdir}/templates/${entry.name}`, "/app.css");
+    await buildSelfContainedHtml(templateEntrypoint, `${outdir}/templates/${entry.name}`, "./app.css");
   }
 }
 

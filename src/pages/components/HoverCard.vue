@@ -1,47 +1,46 @@
--ui<-uis-uic-uir-uii-uip-uit-ui -uis-uie-uit-uiu-uip-ui -uil-uia-uin-uig-ui=-ui"-uit-uis-ui"-ui>-ui
--ui-uii-uim-uip-uio-uir-uit-ui -uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiL-uia-uiy-uio-uiu-uit-ui -uif-uir-uio-uim-ui -ui"-ui@-uia-uip-uip-ui/-uic-uio-uim-uip-uio-uin-uie-uin-uit-ui/-uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiL-uia-uiy-uio-uiu-uit-ui.-uiv-uiu-uie-ui"-ui;-ui
--ui-uii-uim-uip-uio-uir-uit-ui -uiH-uio-uiv-uie-uir-uiC-uia-uir-uid-ui -uif-uir-uio-uim-ui -ui'-ui@-uiu-uii-ui/-uiH-uio-uiv-uie-uir-uiC-uia-uir-uid-ui/-uiH-uio-uiv-uie-uir-uiC-uia-uir-uid-ui.-uiv-uiu-uie-ui'-ui;-ui
--ui-uii-uim-uip-uio-uir-uit-ui -uiH-uio-uiv-uie-uir-uiC-uia-uir-uid-uiT-uir-uii-uig-uig-uie-uir-ui -uif-uir-uio-uim-ui -ui'-ui@-uiu-uii-ui/-uiH-uio-uiv-uie-uir-uiC-uia-uir-uid-ui/-uiH-uio-uiv-uie-uir-uiC-uia-uir-uid-uiT-uir-uii-uig-uig-uie-uir-ui.-uiv-uiu-uie-ui'-ui;-ui
--ui-uii-uim-uip-uio-uir-uit-ui -uiH-uio-uiv-uie-uir-uiC-uia-uir-uid-uiC-uio-uin-uit-uie-uin-uit-ui -uif-uir-uio-uim-ui -ui'-ui@-uiu-uii-ui/-uiH-uio-uiv-uie-uir-uiC-uia-uir-uid-ui/-uiH-uio-uiv-uie-uir-uiC-uia-uir-uid-uiC-uio-uin-uit-uie-uin-uit-ui.-uiv-uiu-uie-ui'-ui;-ui
--ui-uii-uim-uip-uio-uir-uit-ui -uiB-uiu-uit-uit-uio-uin-ui -uif-uir-uio-uim-ui -ui'-ui@-uiu-uii-ui/-uiB-uiu-uit-uit-uio-uin-ui/-uiB-uiu-uit-uit-uio-uin-ui.-uiv-uiu-uie-ui'-ui;-ui
--ui-ui
--ui-uii-uim-uip-uio-uir-uit-ui -uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiI-uit-uie-uim-uiH-uie-uia-uid-uie-uir-ui -uif-uir-uio-uim-ui -ui'-ui@-uia-uip-uip-ui/-uic-uio-uim-uip-uio-uin-uie-uin-uit-ui/-uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiI-uit-uie-uim-uiH-uie-uia-uid-uie-uir-ui.-uiv-uiu-uie-ui'-ui;-ui
--ui-uii-uim-uip-uio-uir-uit-ui -uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiI-uit-uie-uim-uiH-uie-uia-uid-uie-uir-uiT-uii-uit-uil-uie-ui -uif-uir-uio-uim-ui -ui'-ui@-uia-uip-uip-ui/-uic-uio-uim-uip-uio-uin-uie-uin-uit-ui/-uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiI-uit-uie-uim-uiH-uie-uia-uid-uie-uir-uiT-uii-uit-uil-uie-ui.-uiv-uiu-uie-ui'-ui;-ui
--ui-uii-uim-uip-uio-uir-uit-ui -uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiI-uit-uie-uim-uiH-uie-uia-uid-uie-uir-uiD-uie-uis-uic-uir-uii-uip-uit-uii-uio-uin-ui -uif-uir-uio-uim-ui -ui'-ui@-uia-uip-uip-ui/-uic-uio-uim-uip-uio-uin-uie-uin-uit-ui/-uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiI-uit-uie-uim-uiH-uie-uia-uid-uie-uir-uiD-uie-uis-uic-uir-uii-uip-uit-uii-uio-uin-ui.-uiv-uiu-uie-ui'-ui;-ui
--ui-uii-uim-uip-uio-uir-uit-ui -uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiI-uit-uie-uim-uiS-uie-uic-uit-uii-uio-uin-ui -uif-uir-uio-uim-ui -ui'-ui@-uia-uip-uip-ui/-uic-uio-uim-uip-uio-uin-uie-uin-uit-ui/-uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiI-uit-uie-uim-uiS-uie-uic-uit-uii-uio-uin-ui.-uiv-uiu-uie-ui'-ui;-ui
--ui-uii-uim-uip-uio-uir-uit-ui -uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiI-uit-uie-uim-uiS-uie-uic-uit-uii-uio-uin-uiD-uie-uis-uic-uir-uii-uip-uit-uii-uio-uin-ui -uif-uir-uio-uim-ui -ui'-ui@-uia-uip-uip-ui/-uic-uio-uim-uip-uio-uin-uie-uin-uit-ui/-uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiI-uit-uie-uim-uiS-uie-uic-uit-uii-uio-uin-uiD-uie-uis-uic-uir-uii-uip-uit-uii-uio-uin-ui.-uiv-uiu-uie-ui'-ui;-ui
--ui-uii-uim-uip-uio-uir-uit-ui -uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiI-uit-uie-uim-uiS-uie-uic-uit-uii-uio-uin-uiE-uix-uia-uim-uip-uil-uie-ui -uif-uir-uio-uim-ui -ui'-ui@-uia-uip-uip-ui/-uic-uio-uim-uip-uio-uin-uie-uin-uit-ui/-uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiI-uit-uie-uim-uiS-uie-uic-uit-uii-uio-uin-uiE-uix-uia-uim-uip-uil-uie-ui.-uiv-uiu-uie-ui'-ui;-ui
--ui-ui<-ui/-uis-uic-uir-uii-uip-uit-ui>-ui
--ui-ui
--ui-ui<-uit-uie-uim-uip-uil-uia-uit-uie-ui>-ui
--ui-ui -ui -ui<-uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiL-uia-uiy-uio-uiu-uit-ui>-ui
--ui-ui -ui -ui<-uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiI-uit-uie-uim-uiH-uie-uia-uid-uie-uir-ui>-ui
--ui-ui -ui -ui -ui -ui<-uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiI-uit-uie-uim-uiH-uie-uia-uid-uie-uir-uiT-uii-uit-uil-uie-ui>-uiH-uio-uiv-uie-uir-ui -uiC-uia-uir-uid-ui<-ui/-uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiI-uit-uie-uim-uiH-uie-uia-uid-uie-uir-uiT-uii-uit-uil-uie-ui>-ui
--ui-ui -ui -ui -ui -ui<-uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiI-uit-uie-uim-uiH-uie-uia-uid-uie-uir-uiD-uie-uis-uic-uir-uii-uip-uit-uii-uio-uin-ui>-uiA-ui -uir-uii-uic-uih-ui -uic-uia-uir-uid-ui -uir-uie-uiv-uie-uia-uil-uie-uid-ui -uiw-uih-uie-uin-ui -uit-uih-uie-ui -uit-uir-uii-uig-uig-uie-uir-ui -uii-uis-ui -uih-uio-uiv-uie-uir-uie-uid-ui -uio-uir-ui -uif-uio-uic-uiu-uis-uie-uid-ui -uiâ-ui€-ui”-ui -uif-uio-uir-ui -uip-uir-uie-uiv-uii-uie-uiw-uis-ui -uil-uii-uik-uie-ui -uia-ui -uiu-uis-uie-uir-ui -uip-uir-uio-uif-uii-uil-uie-ui.-ui<-ui/-uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiI-uit-uie-uim-uiH-uie-uia-uid-uie-uir-uiD-uie-uis-uic-uir-uii-uip-uit-uii-uio-uin-ui>-ui
--ui-ui -ui -ui<-ui/-uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiI-uit-uie-uim-uiH-uie-uia-uid-uie-uir-ui>-ui
--ui-ui
--ui-ui -ui -ui<-uid-uii-uiv-ui -uic-uil-uia-uis-uis-ui=-ui"-uif-uil-uie-uix-ui -uif-uil-uie-uix-ui--uic-uio-uil-ui -uig-uia-uip-ui--ui1-ui4-ui"-ui>-ui
--ui-ui -ui -ui -ui -ui<-uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiI-uit-uie-uim-uiS-uie-uic-uit-uii-uio-uin-ui>-ui
--ui-ui -ui -ui -ui -ui -ui -ui<-uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiI-uit-uie-uim-uiS-uie-uic-uit-uii-uio-uin-uiD-uie-uis-uic-uir-uii-uip-uit-uii-uio-uin-ui>-uiH-uio-uiv-uie-uir-ui -uit-uih-uie-ui -uit-uir-uii-uig-uig-uie-uir-ui -uit-uio-ui -uip-uir-uie-uiv-uii-uie-uiw-ui.-ui<-ui/-uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiI-uit-uie-uim-uiS-uie-uic-uit-uii-uio-uin-uiD-uie-uis-uic-uir-uii-uip-uit-uii-uio-uin-ui>-ui
--ui-ui -ui -ui -ui -ui -ui -ui<-uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiI-uit-uie-uim-uiS-uie-uic-uit-uii-uio-uin-uiE-uix-uia-uim-uip-uil-uie-ui>-ui
--ui-ui -ui -ui -ui -ui -ui -ui -ui -ui<-uid-uii-uiv-ui -uid-uia-uit-uia-ui--uid-uie-uim-uio-ui=-ui"-uib-uia-uis-uii-uic-ui"-ui>-ui
--ui-ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui<-uiH-uio-uiv-uie-uir-uiC-uia-uir-uid-ui>-ui
--ui-ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui<-uiH-uio-uiv-uie-uir-uiC-uia-uir-uid-uiT-uir-uii-uig-uig-uie-uir-ui>-ui
--ui-ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui<-uiB-uiu-uit-uit-uio-uin-ui -uiv-uia-uir-uii-uia-uin-uit-ui=-ui"-uim-uiu-uit-uie-uid-ui"-ui>-ui@-uis-uit-uir-uia-uit-uia-ui<-ui/-uiB-uiu-uit-uit-uio-uin-ui>-ui
--ui-ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui<-ui/-uiH-uio-uiv-uie-uir-uiC-uia-uir-uid-uiT-uir-uii-uig-uig-uie-uir-ui>-ui
--ui-ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui<-uiH-uio-uiv-uie-uir-uiC-uia-uir-uid-uiC-uio-uin-uit-uie-uin-uit-ui>-ui
--ui-ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui<-uid-uii-uiv-ui -uic-uil-uia-uis-uis-ui=-ui"-uiw-ui--ui6-ui4-ui -uip-ui--ui4-ui"-ui>-ui
--ui-ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui<-uid-uii-uiv-ui -uic-uil-uia-uis-uis-ui=-ui"-uis-uii-uiz-uie-ui--ui1-ui0-ui -uir-uio-uiu-uin-uid-uie-uid-ui--uif-uiu-uil-uil-ui -uib-uig-ui--uif-uio-uir-uie-uig-uir-uio-uiu-uin-uid-ui/-ui1-ui0-ui"-ui>-ui<-ui/-uid-uii-uiv-ui>-ui
--ui-ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui<-uip-ui -uic-uil-uia-uis-uis-ui=-ui"-uim-uit-ui--ui3-ui -uit-uie-uix-uit-ui--uis-uim-ui -uif-uio-uin-uit-ui--uis-uie-uim-uii-uib-uio-uil-uid-ui -uit-uie-uix-uit-ui--uif-uio-uir-uie-uig-uir-uio-uiu-uin-uid-ui"-ui>-uiS-uit-uir-uia-uit-uia-ui -uiU-uiI-ui<-ui/-uip-ui>-ui
--ui-ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui<-uip-ui -uic-uil-uia-uis-uis-ui=-ui"-uim-uit-ui--ui1-ui -uit-uie-uix-uit-ui--uix-uis-ui -uit-uie-uix-uit-ui--uim-uiu-uit-uie-uid-ui"-ui>-uiA-ui -uiV-uiu-uie-ui -uiU-uiI-ui -uik-uii-uit-ui -uio-uif-ui -uip-uir-uii-uim-uii-uit-uii-uiv-uie-uis-ui.-ui<-ui/-uip-ui>-ui
--ui-ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui<-uip-ui -uic-uil-uia-uis-uis-ui=-ui"-uim-uit-ui--ui3-ui -uit-uie-uix-uit-ui--uix-uis-ui -uit-uie-uix-uit-ui--uif-uia-uii-uin-uit-ui"-ui>-uiJ-uio-uii-uin-uie-uid-ui -uiJ-uiu-uin-uie-ui -ui2-ui0-ui2-ui6-ui<-ui/-uip-ui>-ui
--ui-ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui<-ui/-uid-uii-uiv-ui>-ui
--ui-ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui<-ui/-uiH-uio-uiv-uie-uir-uiC-uia-uir-uid-uiC-uio-uin-uit-uie-uin-uit-ui>-ui
--ui-ui -ui -ui -ui -ui -ui -ui -ui -ui -ui -ui<-ui/-uiH-uio-uiv-uie-uir-uiC-uia-uir-uid-ui>-ui
--ui-ui -ui -ui -ui -ui -ui -ui -ui -ui<-ui/-uid-uii-uiv-ui>-ui
--ui-ui -ui -ui -ui -ui -ui -ui<-ui/-uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiI-uit-uie-uim-uiS-uie-uic-uit-uii-uio-uin-uiE-uix-uia-uim-uip-uil-uie-ui>-ui
--ui-ui -ui -ui -ui -ui<-ui/-uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiI-uit-uie-uim-uiS-uie-uic-uit-uii-uio-uin-ui>-ui
--ui-ui -ui -ui<-ui/-uid-uii-uiv-ui>-ui
--ui-ui -ui -ui<-ui/-uiC-uio-uim-uip-uio-uin-uie-uin-uit-uiL-uia-uiy-uio-uiu-uit-ui>-ui
--ui-ui<-ui/-uit-uie-uim-uip-uil-uia-uit-uie-ui>-ui
--ui
+<script setup lang="ts">
+import ComponentLayout from "@app/component/ComponentLayout.vue";
+import HoverCard from '@ui/HoverCard/HoverCard.vue';
+import HoverCardTrigger from '@ui/HoverCard/HoverCardTrigger.vue';
+import HoverCardContent from '@ui/HoverCard/HoverCardContent.vue';
+import Button from '@ui/Button/Button.vue';
+
+import ComponentItemHeader from '@app/component/ComponentItemHeader.vue';
+import ComponentItemHeaderTitle from '@app/component/ComponentItemHeaderTitle.vue';
+import ComponentItemHeaderDescription from '@app/component/ComponentItemHeaderDescription.vue';
+import ComponentItemSection from '@app/component/ComponentItemSection.vue';
+import ComponentItemSectionDescription from '@app/component/ComponentItemSectionDescription.vue';
+import ComponentItemSectionExample from '@app/component/ComponentItemSectionExample.vue';
+</script>
+
+<template>
+  <ComponentLayout>
+    <ComponentItemHeader>
+      <ComponentItemHeaderTitle>Hover Card</ComponentItemHeaderTitle>
+      <ComponentItemHeaderDescription>A rich card revealed when the trigger is hovered or focused â€” for previews like a user profile.</ComponentItemHeaderDescription>
+    </ComponentItemHeader>
+
+    <div class="flex flex-col gap-14">
+      <ComponentItemSection>
+        <ComponentItemSectionDescription>Hover the trigger to preview.</ComponentItemSectionDescription>
+        <ComponentItemSectionExample>
+          <div data-demo="basic">
+            <HoverCard>
+              <HoverCardTrigger>
+                <Button variant="muted">@strata</Button>
+              </HoverCardTrigger>
+              <HoverCardContent>
+                <div class="w-64 p-4">
+                  <div class="size-10 rounded-full bg-foreground/10"></div>
+                  <p class="mt-3 text-sm font-semibold text-foreground">Strata</p>
+                  <p class="mt-1 text-xs text-muted">A Vue UI kit of primitives.</p>
+                  <p class="mt-3 text-xs text-faint">Joined June 2026</p>
+                </div>
+              </HoverCardContent>
+            </HoverCard>
+          </div>
+        </ComponentItemSectionExample>
+      </ComponentItemSection>
+    </div>
+  </ComponentLayout>
+</template>
