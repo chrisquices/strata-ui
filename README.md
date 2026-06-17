@@ -142,6 +142,12 @@ Project-specific shell and documentation app components under `src/components/ap
 
 ## Local Development
 
+After cloning, activate the git hooks:
+
+```bash
+git config core.hooksPath .githooks
+```
+
 Run the development server:
 
 ```bash
