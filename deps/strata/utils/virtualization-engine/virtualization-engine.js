@@ -247,8 +247,13 @@ export class VirtualizationEngine {
             const current = Number.isFinite(this.scrollElement.scrollTop)
                 ? Math.max(0, this.scrollElement.scrollTop)
                 : 0;
-            // Already fully in view — don't scroll.
-            if (rect.y >= current && rect.y + rect.height <= current + viewportHeight) return;
+            // Already fully in view — don't scroll, but still reconcile geometry
+            // (an anchored update commits any pending remeasure and keeps _lastWidth
+            // consistent so a same-width ResizeObserver tick isn't gated away).
+            if (rect.y >= current && rect.y + rect.height <= current + viewportHeight) {
+                this._update(true);
+                return;
+            }
             target =
                 rect.y + rect.height > current + viewportHeight
                     ? rect.y - viewportHeight + rect.height // below the fold → align end
@@ -467,8 +472,12 @@ export class VirtualizationEngine {
         // update may write, and the write happens after onChange so the spacer is
         // already sized.
         if (!this._destroyed && this._updateSeq === mySeq && targetScrollTop !== scrollTop) {
-            this._selfScroll = true;
+            const beforeWrite = element.scrollTop;
             element.scrollTop = targetScrollTop;
+            // Only expect a scroll-event echo if the write actually moved the position.
+            // A clamped/rounded no-op fires no event and would otherwise strand
+            // _selfScroll, mis-skipping the next real gesture's isScrolling start.
+            this._selfScroll = element.scrollTop !== beforeWrite;
         }
     }
 }
