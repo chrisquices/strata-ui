@@ -35,7 +35,7 @@ function onSelect(event) {
     <component
         :is="icon"
         v-if="icon"
-        :class="['size-icon-medium shrink-0', destructive ? 'text-current' : 'text-muted group-hover:text-current group-data-[highlighted]:text-current']"
+        :class="['size-icon shrink-0', destructive ? 'text-current' : 'text-muted group-hover:text-current group-data-[highlighted]:text-current']"
     />
     <span class="min-w-0 truncate"><slot /></span>
   </ContextMenuItem>

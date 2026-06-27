@@ -4,6 +4,6 @@ import { SwitchThumb } from 'reka-ui';
 
 <template>
   <SwitchThumb
-    class="pointer-events-none block size-control-indicator rounded-full bg-background shadow-panel transition-transform duration-100 data-[state=checked]:translate-x-4 data-[state=unchecked]:translate-x-0"
+    class="pointer-events-none block size-indicator rounded-full bg-background shadow-panel transition-transform duration-100 data-[state=checked]:translate-x-4 data-[state=unchecked]:translate-x-0"
   />
 </template>

@@ -6,7 +6,7 @@ defineOptions({inheritAttrs: false});
 defineProps({
   variant: {type: String, default: 'secondary'},
   outline: {type: Boolean, default: false},
-  size: { type: String, default: 'md' },
+  size: {type: String, default: 'md'},
 });
 </script>
 

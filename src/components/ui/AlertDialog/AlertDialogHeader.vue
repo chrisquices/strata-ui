@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="flex flex-col items-center gap-4 px-6 pt-6 text-center">
+  <div class="flex flex-col items-center gap-stack-small px-overlay pt-overlay text-center">
     <slot/>
   </div>
 </template>

@@ -9,7 +9,7 @@ const base =
 
 <template>
   <PaginationPrev :aria-label="label" :class="base">
-    <ChevronLeft class="size-icon-medium" aria-hidden="true" />
+    <ChevronLeft class="size-icon" aria-hidden="true" />
     <span class="hidden sm:inline"><slot>Previous</slot></span>
   </PaginationPrev>
 </template>

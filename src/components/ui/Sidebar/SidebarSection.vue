@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import Caption from '../Caption/Caption.vue';
-
 defineProps({
   label: {default: undefined},
 });

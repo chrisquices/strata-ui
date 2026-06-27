@@ -4,17 +4,17 @@ import {AccordionContent} from 'reka-ui';
 
 <template>
   <AccordionContent class="strata-accordion-content">
-    <!-- Padding stays on the inner div; on the height-animated element it would stop the panel collapsing flush to 0. -->
-    <div class="pb-4 text-sm text-muted">
+
+    <!-- Keep padding inside the animated height wrapper so closed panels collapse to 0. -->
+    <div class="pb-stack text-sm text-muted">
       <slot/>
     </div>
   </AccordionContent>
 </template>
 
 <style>
-/* Height expand/collapse, keyed off reka's data-state. Co-located here — only this component
-   uses it. Non-scoped: the class sits on reka's AccordionContent root, which a scope hash
-   wouldn't tag. */
+
+/* Non-scoped because the class sits on reka's AccordionContent root. */
 @keyframes strata-accordion-down {
   from {
     height: 0;

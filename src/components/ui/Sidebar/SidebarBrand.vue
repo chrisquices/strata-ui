@@ -15,13 +15,13 @@ defineProps({
       <span
           class="inline-grid size-8 shrink-0 place-items-center rounded-medium border border-border bg-surface text-foreground"
           aria-label="Strata" role="img">
-        <Layers class="size-icon-medium" aria-hidden="true"/>
+        <Layers class="size-icon" aria-hidden="true"/>
       </span>
       <Caption tone="foreground" class="group-data-[collapsed]/sidebar:hidden">Strata</Caption>
     </div>
     <Button icon variant="ghost" size="sm" aria-label="Close navigation"
             class="xl:hidden group-data-[collapsed]/sidebar:hidden" @click="onclose && onclose()">
-      <X class="size-icon-medium"/>
+      <X class="size-icon"/>
     </Button>
   </SidebarHeader>
 </template>

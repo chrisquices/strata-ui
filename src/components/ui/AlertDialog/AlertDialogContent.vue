@@ -11,7 +11,7 @@ defineOptions({inheritAttrs: false});
     <AlertDialogContent
         v-bind="$attrs"
         disable-outside-pointer-events
-        class="strata-menu-pop fixed left-1/2 top-1/2 z-modal flex max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-md -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden rounded-large border border-border bg-surface text-foreground shadow-overlay focus-visible:outline-none"
+        class="strata-menu-pop fixed left-1/2 top-1/2 z-modal flex max-h-[calc(100dvh-var(--spacing-overlay)-var(--spacing-overlay))] w-[calc(100%-var(--spacing-overlay)-var(--spacing-overlay))] max-w-md -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden rounded-large border border-border bg-surface text-foreground shadow-overlay focus-visible:outline-none"
     >
       <slot/>
     </AlertDialogContent>

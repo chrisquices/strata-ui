@@ -4,7 +4,6 @@ import {AccordionItem} from 'reka-ui';
 defineProps({
   value: {type: String, required: true},
   disabled: {type: Boolean, default: false},
-  // undefined → reka inherits the root's unmountOnHide via `??`.
   unmountOnHide: {type: Boolean, default: undefined},
 });
 </script>

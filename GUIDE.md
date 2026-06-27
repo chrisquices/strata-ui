@@ -96,3 +96,17 @@ Trigger this isolated flow only when the user says `review component <component-
 10. Be decisive. Recommend only changes that should actually be made; do not suggest an option and then walk it back.
 11. If implementation fixes are requested after the review, apply the agreed changes, run the documented build, and report the result.
 12. After finishing a scan/sweep/fix, read this section AGAIN from new (not from memory) and go through all your changes and verify whether you followed through all these rules.
+
+## Review component class flow
+
+Trigger this isolated flow only when the user says exactly `review component class`. If this flow is already active in the current chat context and the user says exactly `next`, treat `next` as another trigger for this same flow and continue with the next unreviewed component. Do not run this whole flow for casual questions, implementation requests, ordinary code reviews, a named component request such as `review component class accordion`, or the separate `review component <component-name>` flow unless the user uses one of those exact trigger phrases. These are absolute rules, they are not guidelines or optional, they are REQUIRED and NON-OPTIONAL.
+
+1. Determine the component to review by listing the direct child component folders in `src/components/ui` alphabetically and selecting the first component that is not already listed in `Reviewed component classes`.
+2. Review the component implementation itself, not the component page, to find every practical opportunity to apply the design token system completely and consistently with all applicable tokens.
+3. Review every existing comment in the component being reviewed. Delete dead, unnecessary, obvious, or redundant comments immediately without waiting for confirmation. Keep comments that explain non-obvious behavior, browser/framework constraints, accessibility reasoning, or other useful implementation context.
+4. After this review flow is triggered, do not edit any files, run automatic cleanup, or make implementation changes except for the comment deletion allowed above. Report design-token findings first, wait for the user to confirm what to edit, and only then make the confirmed changes.
+5. Output only a brief numbered list so the user can approve, reject, or ask about findings by number. Do not use bullets, paragraphs, summaries, praise, or explanations of things that are already correct.
+6. After the user confirms edits, apply only the confirmed changes, run the documented build, and report the result.
+7. After the confirmed edits are complete and the component is finished, add the component name to `Reviewed component classes` in alphabetical order.
+
+Reviewed component classes: accordion, alertdialog.

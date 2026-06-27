@@ -6,7 +6,7 @@
 defineProps({
   ratio: {
     type: [String, Number],
-    default: '16 / 9',
+    default: '16/9',
     validator: function (value: string | number) {
       return typeof CSS === 'undefined' || CSS.supports('aspect-ratio', String(value));
     },

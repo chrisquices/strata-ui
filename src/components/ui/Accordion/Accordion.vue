@@ -15,6 +15,7 @@ defineProps({
   disabled: {type: Boolean, default: false},
   unmountOnHide: {type: Boolean, default: true},
 });
+
 const model = defineModel<string | string[]>();
 </script>
 

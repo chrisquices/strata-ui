@@ -26,7 +26,7 @@ function onSelect(event) {
 
 <template>
   <ContextMenuRadioItem :value="value" :disabled="disabled" :class="[base, stateClass]" @select="onSelect">
-    <span class="pointer-events-none inline-flex size-icon-medium shrink-0 items-center justify-center" aria-hidden="true">
+    <span class="pointer-events-none inline-flex size-icon shrink-0 items-center justify-center" aria-hidden="true">
       <ContextMenuItemIndicator>
         <span class="size-1.5 rounded-full bg-current"></span>
       </ContextMenuItemIndicator>

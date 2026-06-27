@@ -1,4 +1,5 @@
 <script lang="ts">
+
 // Module scope: defineProps is hoisted and can't see <script setup> consts.
 const LEVELS = [1, 2, 3, 4, 5, 6];
 </script>
@@ -27,8 +28,7 @@ const headingTag = computed(function () {
   return LEVELS.includes(Number(props.level)) ? `h${Number(props.level)}` : 'h3';
 });
 
-// APG: the permanently-open trigger (non-collapsible single mode) and any
-// disabled item both report aria-disabled.
+// APG: the permanently-open trigger (non-collapsible single mode) and any disabled item both report aria-disabled.
 const pinnedOpen = computed(function () {
   return rootContext.isSingle.value && !rootContext.collapsible && itemContext.open.value;
 });
@@ -42,7 +42,7 @@ const triggerAriaDisabled = computed(function () {
   <RekaAccordionHeader :as="headingTag" class="flex">
     <RekaAccordionTrigger
         :aria-disabled="triggerAriaDisabled"
-        class="group flex flex-1 items-center justify-between py-4 text-sm font-medium text-muted transition-colors duration-200 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/30 focus-visible:ring-offset-2 focus-visible:ring-offset-background data-[state=open]:text-foreground data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50"
+        class="group flex flex-1 items-center justify-between gap-cluster py-stack text-sm font-medium text-muted transition-colors duration-200 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/30 focus-visible:ring-offset-2 focus-visible:ring-offset-background data-[state=open]:text-foreground data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50"
     >
       <span class="text-start"><slot/></span>
       <ChevronDown

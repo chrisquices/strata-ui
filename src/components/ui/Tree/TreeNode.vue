@@ -45,7 +45,7 @@ function activateNode() {
     <span v-else class="size-icon-small shrink-0" aria-hidden="true"></span>
 
     <component :is="node.icon" v-if="node.icon"
-               class="size-icon-medium shrink-0 text-faint group-data-[selected]:text-foreground"/>
+               class="size-icon shrink-0 text-faint group-data-[selected]:text-foreground"/>
     <span class="flex-1 truncate">{{ node.label }}</span>
     <span v-if="node.count !== undefined" class="shrink-0 text-xs text-faint">{{ node.count }}</span>
 

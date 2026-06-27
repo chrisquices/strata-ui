@@ -20,7 +20,7 @@ const props = defineProps({
 
 const sizeClass = {
   sm: 'size-icon-small border',
-  default: 'size-icon-medium border-medium',
+  default: 'size-icon border-medium',
   lg: 'size-icon-large border-medium',
 };
 

@@ -1,9 +1,8 @@
 import {createApp} from "vue";
 import {createRouter, createWebHashHistory} from "vue-router";
 import App from "@app/App.vue";
-import {componentRoutes} from "./pages/components/routes";
-import {utilityRoutes} from "./pages/utilities/routes";
-import ComponentsIndex from "./pages/components/Index.vue";
+import {componentRoutes} from "./pages/routes";
+import ComponentsIndex from "./pages/Index.vue";
 
 const router = createRouter({
     history: createWebHashHistory(),
@@ -11,7 +10,6 @@ const router = createRouter({
         {path: "/", redirect: "/components"},
         {path: "/components", component: ComponentsIndex},
         ...componentRoutes,
-        ...utilityRoutes,
         {path: "/:pathMatch(.*)*", redirect: "/components"},
     ],
 });

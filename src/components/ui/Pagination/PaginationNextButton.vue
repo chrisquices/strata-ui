@@ -10,6 +10,6 @@ const base =
 <template>
   <PaginationNext :aria-label="label" :class="base">
     <span class="hidden sm:inline"><slot>Next</slot></span>
-    <ChevronRight class="size-icon-medium" aria-hidden="true" />
+    <ChevronRight class="size-icon" aria-hidden="true" />
   </PaginationNext>
 </template>

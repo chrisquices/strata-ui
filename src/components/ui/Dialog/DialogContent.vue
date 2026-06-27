@@ -25,7 +25,7 @@ defineProps({
           :aria-label="closeLabel"
           class="absolute right-4 top-4 inline-flex size-icon-large items-center justify-center rounded-medium text-muted transition-colors hover:bg-background hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/30"
       >
-        <X class="size-icon-medium"/>
+        <X class="size-icon"/>
       </DialogClose>
     </DialogContent>
   </DialogPortal>

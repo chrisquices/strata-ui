@@ -9,10 +9,10 @@ import SidebarHeader from './SidebarHeader.vue';
     <slot>
       <div class="flex items-center gap-1 min-w-0">
         <Button variant="secondary" icon aria-label="New">
-          <Plus class="size-icon-medium"/>
+          <Plus class="size-icon"/>
         </Button>
         <Button variant="ghost" icon aria-label="Filter" class="group-data-[collapsed]/sidebar:hidden">
-          <Filter class="size-icon-medium"/>
+          <Filter class="size-icon"/>
         </Button>
       </div>
     </slot>

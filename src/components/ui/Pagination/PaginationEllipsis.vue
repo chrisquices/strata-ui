@@ -4,6 +4,6 @@ import { MoreHorizontal } from '@lucide/vue';
 
 <template>
   <span aria-hidden="true" class="inline-flex h-control aspect-square items-center justify-center text-faint">
-    <MoreHorizontal class="size-icon-medium" />
+    <MoreHorizontal class="size-icon" />
   </span>
 </template>

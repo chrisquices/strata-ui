@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import {computed} from 'vue';
 import {RouterLink, RouterView, useRoute, useRouter} from 'vue-router';
 import {
   AlertCircle,
@@ -47,7 +46,6 @@ import {
   MousePointerClick,
   Package,
   Palette,
-  PanelLeft,
   PanelRight,
   Pencil,
   Rows3,
@@ -68,21 +66,12 @@ import {
   Wrench,
 } from '@lucide/vue';
 import Card from '@ui/Card/Card.vue';
-import Separator from '@ui/Separator/Separator.vue';
-import Caption from '@ui/Caption/Caption.vue';
-import Button from '@ui/Button/Button.vue';
 import Sidebar from '@ui/Sidebar/Sidebar.vue';
-import SidebarActions from '@ui/Sidebar/SidebarActions.vue';
 import SidebarMenu from '@ui/Sidebar/SidebarMenu.vue';
 import SidebarMenuItem from '@ui/Sidebar/SidebarMenuItem.vue';
 import SidebarMenuSub from '@ui/Sidebar/SidebarMenuSub.vue';
 import SidebarSection from '@ui/Sidebar/SidebarSection.vue';
 import SidebarSectionCaption from '@ui/Sidebar/SidebarSectionCaption.vue';
-import CardDescription from "@ui/Card/CardDescription.vue";
-import CardHeader from "@ui/Card/CardHeader.vue";
-import CardAction from "@ui/Card/CardAction.vue";
-import CardTitle from "@ui/Card/CardTitle.vue";
-import CardContent from "@ui/Card/CardContent.vue";
 
 const route = useRoute();
 const router = useRouter();
@@ -164,69 +153,55 @@ const compositeItems = [
   return a.label.localeCompare(b.label);
 });
 
-const utilityItems = [
-  {id: 'virtualization-engine', label: 'Virtualization Engine', icon: ListTree},
-];
-
-const activeSection = computed(function () {
-  return route.path.startsWith('/utilities') ? 'utilities' : 'components';
-});
 const componentGroups = [
-  {id: 'primitives', label: 'Primitives', icon: Layers, items: primitiveItems},
-  {id: 'composites', label: 'Composites', icon: Group, items: compositeItems},
-  {id: 'engines', label: 'Engines', icon: Wrench, items: engineItems},
+  {id: 'primitives', label: 'Primitives', icon: Layers, items: primitiveItems, defaultOpen: false},
+  {id: 'composites', label: 'Composites', icon: Group, items: compositeItems, defaultOpen: false},
+  {id: 'engines', label: 'Engines', icon: Wrench, items: engineItems, defaultOpen: true},
 ];
 
-const menuSections = computed(function () {
-  if (activeSection.value === 'utilities') {
-    return [
-      {
-        id: 'utilities',
-        label: 'Utilities',
-        groups: [{id: 'utilities', label: 'Utilities', icon: Wrench, items: utilityItems}]
-      },
-    ];
-  }
-
-  return [
-    {id: 'components', label: 'Components', groups: componentGroups},
-  ];
-});
+const menuSections = [
+  {id: 'components', label: 'Components', groups: componentGroups},
+];
 
 function navigate(id: string, event: MouseEvent) {
   event.preventDefault();
-  router.push(`/${activeSection.value}/${id}`);
+  router.push(`/components/${id}`);
 }
 </script>
 
 <template>
-  <div class="strata-shell flex h-screen flex-col overflow-hidden bg-linear-to-br from-neutral-950 via-neutral-800 to-neutral-950 text-foreground p-8">
+  <div class="strata-shell flex h-screen flex-col overflow-hidden text-foreground p-8"
+       style="position:absolute;inset:0;z-index:0;background:radial-gradient(circle at 20% 20%, rgba(255,255,255,0.08) 0%, transparent 40%), radial-gradient(circle at 80% 30%, rgba(255,255,255,0.05) 0%, transparent 40%), linear-gradient(120deg, #0f0f11 0%, #1a1a1d 100%)">
 
-    <Card class="relative mx-auto flex flex-row h-full w-full max-w-7xl flex-1 bg-background! p-0!">
+    <Card class="relative mx-auto flex flex-row h-full w-full max-w-6xl flex-1 p-0! rounded-xl!">
 
       <Sidebar
           aria-label="primary sidebar"
-          class="strata-chrome z-sidebar md:w-72 transition-[width] duration-200"
+          side="left"
+          class="strata-chrome z-sidebar md:w-72 transition-[width] duration-200 rounded-l-xl!"
       >
-        <div class="sticky top-0 z-10 p-6 bg-sidebar border-b border-border">
-          <p class="font-semibold leading-snug tracking-tight text-foreground">Strata UI</p>
-          <p class="text-sm text-muted">Media-focused UI & Engine Kit</p>
-        </div>
+        <RouterLink to="/components" class="block">
+          <div class="sticky top-0 z-10 p-6 bg-topbar border-b border-r border-border rounded-tl-xl">
+            <p class="font-semibold leading-snug tracking-tight text-foreground">Strata UI</p>
+            <p class="text-sm text-muted">Media-focused UI & Engine Kit</p>
+          </div>
+        </RouterLink>
 
         <SidebarSection
             v-for="section in menuSections"
             :key="section.id"
         >
+
           <SidebarSectionCaption>{{ section.label }}</SidebarSectionCaption>
 
           <SidebarMenu>
             <SidebarMenuItem
                 v-for="group in section.groups"
                 :key="group.id"
-                default-open
+                :default-open="group.defaultOpen"
             >
               <template #icon>
-                <component :is="group.icon" class="size-icon-medium shrink-0" aria-hidden="true"/>
+                <component :is="group.icon" class="size-icon shrink-0" aria-hidden="true"/>
               </template>
               {{ group.label }}
               <template #submenu>
@@ -234,48 +209,22 @@ function navigate(id: string, event: MouseEvent) {
                   <SidebarMenuItem
                       v-for="item in group.items"
                       :key="item.id"
-                      :href="`/${activeSection}/${item.id}`"
-                      :selected="route.path === `/${activeSection}/${item.id}`"
+                      :href="`/components/${item.id}`"
+                      :selected="route.path === `/components/${item.id}`"
                       @click="navigate(item.id, $event)"
                   >
                     <template #icon>
-                      <component :is="item.icon" class="size-icon-medium shrink-0" aria-hidden="true"/>
+                      <component :is="item.icon" class="size-icon shrink-0" aria-hidden="true"/>
                     </template>
                     {{ item.label }}
-                  </SidebarMenuItem>
-
-                  <!-- Temp placeholder structure -->
-                  <SidebarMenuItem v-if="group.id === 'primitives'" default-open>
-                    <template #icon>
-                      <Package class="size-icon-medium shrink-0" aria-hidden="true"/>
-                    </template>
-                    Placeholder Group
-                    <template #submenu>
-                      <SidebarMenuSub align-icons>
-                        <SidebarMenuItem default-open>
-                          <template #icon>
-                            <ListTree class="size-icon-medium shrink-0" aria-hidden="true"/>
-                          </template>
-                          Nested Placeholder
-                          <template #submenu>
-                            <SidebarMenuSub align-icons>
-                              <SidebarMenuItem>
-                                <template #icon>
-                                  <Circle class="size-icon-medium shrink-0" aria-hidden="true"/>
-                                </template>
-                                Placeholder Leaf
-                              </SidebarMenuItem>
-                            </SidebarMenuSub>
-                          </template>
-                        </SidebarMenuItem>
-                      </SidebarMenuSub>
-                    </template>
                   </SidebarMenuItem>
                 </SidebarMenuSub>
               </template>
             </SidebarMenuItem>
           </SidebarMenu>
         </SidebarSection>
+
+        <div class="h-44"></div>
       </Sidebar>
 
       <div class="flex min-h-0 flex-1 overflow-hidden">

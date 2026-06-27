@@ -119,8 +119,8 @@ const disabledClass = computed(() => (props.disabled ? 'pointer-events-none curs
 .strata-sidebar-menu-sub[data-align-icons] > li > .strata-sidebar-menu-item:not(:has(> svg:first-child))::before,
 .strata-sidebar-menu-sub[data-align-icons] > li > div > .strata-sidebar-menu-item:not(:has(> svg:first-child))::before {
   content: '';
-  width: var(--spacing-icon-medium);
-  height: var(--spacing-icon-medium);
-  flex: 0 0 var(--spacing-icon-medium);
+  width: var(--spacing-icon);
+  height: var(--spacing-icon);
+  flex: 0 0 var(--spacing-icon);
 }
 </style>

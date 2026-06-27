@@ -27,10 +27,10 @@ function onSelect(event) {
 
 <template>
   <ContextMenuCheckboxItem v-model="checked" :disabled="disabled" :class="[base, stateClass]" @select="onSelect">
-    <span class="pointer-events-none inline-flex size-icon-medium shrink-0 items-center justify-center"
+    <span class="pointer-events-none inline-flex size-icon shrink-0 items-center justify-center"
           aria-hidden="true">
       <ContextMenuItemIndicator>
-        <Check class="size-icon-medium"/>
+        <Check class="size-icon"/>
       </ContextMenuItemIndicator>
     </span>
     <slot/>

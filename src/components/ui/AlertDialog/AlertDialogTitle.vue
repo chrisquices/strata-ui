@@ -5,7 +5,7 @@ defineProps({as: {default: 'h2'}});
 </script>
 
 <template>
-  <AlertDialogTitle :as="as" class="text-lg font-semibold tracking-tight text-foreground">
+  <AlertDialogTitle :as="as" class="text-base tracking-wide text-foreground">
     <slot/>
   </AlertDialogTitle>
 </template>

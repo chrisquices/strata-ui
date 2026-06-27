@@ -32,7 +32,7 @@ const checked = defineModel<boolean | 'indeterminate'>('checked');
       :value="value"
       :class="['group inline-flex focus-visible:outline-none', disabled ? 'cursor-not-allowed opacity-50' : 'cursor-default']"
   >
-    <span class="flex size-control-indicator shrink-0 items-center justify-center rounded-small border border-border bg-background transition-colors duration-100 group-data-[state=checked]:border-foreground group-data-[state=checked]:bg-foreground group-data-[state=indeterminate]:border-foreground group-data-[state=indeterminate]:bg-foreground group-data-[state=unchecked]:group-hover:border-foreground/50 group-focus-visible:ring-2 group-focus-visible:ring-foreground/30">
+    <span class="flex size-indicator shrink-0 items-center justify-center rounded-small border border-border bg-background transition-colors duration-100 group-data-[state=checked]:border-foreground group-data-[state=checked]:bg-foreground group-data-[state=indeterminate]:border-foreground group-data-[state=indeterminate]:bg-foreground group-data-[state=unchecked]:group-hover:border-foreground/50 group-focus-visible:ring-2 group-focus-visible:ring-foreground/30">
       <CheckboxIndicator class="flex items-center justify-center text-background">
         <Minus v-if="state === 'indeterminate'" class="size-icon-small" aria-hidden="true"/>
         <Check v-else class="size-icon-small" aria-hidden="true"/>
