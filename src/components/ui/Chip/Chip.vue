@@ -2,6 +2,7 @@
 import type {PropType} from 'vue';
 import {computed} from 'vue';
 import {X} from '@lucide/vue';
+import {cn} from '../utils';
 
 const props = defineProps({
   variant: {
@@ -95,13 +96,13 @@ const dimmedClass = computed(function () {
   return props.disabled ? 'pointer-events-none opacity-50' : '';
 });
 const contentClass = computed(function () {
-  return props.icon ? 'inline-flex min-w-0 items-center justify-center' : 'inline-flex min-w-0 items-center justify-center gap-2 truncate';
+  return props.icon ? 'inline-flex min-w-0 items-center justify-center' : 'inline-flex min-w-0 items-center justify-center gap-cluster-small truncate';
 });
 const dismissHover = computed(function () {
   return props.outline ? dismissOutlined[props.variant] : dismissFilled[props.variant];
 });
 const dismissSize = computed(function () {
-  return props.size === 'sm' ? 'size-3' : props.size === 'lg' ? 'size-4' : 'size-3.5';
+  return props.size === 'sm' ? 'size-icon-extra-small' : props.size === 'lg' ? 'size-icon' : 'size-icon-small';
 });
 
 function dismiss(event: MouseEvent) {
@@ -119,7 +120,7 @@ function dismiss(event: MouseEvent) {
 <template>
   <span
       :aria-disabled="disabled || undefined"
-      :class="[base, variantClass, sizeClass, radiusClass, dimmedClass]"
+      :class="cn(base, variantClass, sizeClass, radiusClass, dimmedClass, $attrs.class)"
       :data-disabled="disabled || undefined"
   >
     <span :class="contentClass">

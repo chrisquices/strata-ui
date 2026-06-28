@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import ComponentContent from "@app/component/ComponentContent.vue";
 import {ref} from 'vue';
-import {Trash2, LogOut} from '@lucide/vue';
+import {ShieldAlert, LogOut} from '@lucide/vue';
 
 import AlertDialog from '@ui/AlertDialog/AlertDialog.vue';
 import AlertDialogTrigger from '@ui/AlertDialog/AlertDialogTrigger.vue';
@@ -51,11 +51,11 @@ const controlledOpen = ref(false);
       </ComponentItemSectionDescription>
       <ComponentItemSectionExample>
         <AlertDialog>
-          <AlertDialogTrigger variant="destructive">Delete project</AlertDialogTrigger>
+          <AlertDialogTrigger variant="primary">Delete project</AlertDialogTrigger>
           <AlertDialogContent>
             <AlertDialogHeader>
               <AlertDialogIcon>
-                <Trash2 class="size-icon-large"/>
+                <ShieldAlert class="size-icon-extra-large"/>
               </AlertDialogIcon>
               <AlertDialogTitle>Delete this project?</AlertDialogTitle>
               <AlertDialogDescription>
@@ -64,7 +64,7 @@ const controlledOpen = ref(false);
             </AlertDialogHeader>
             <AlertDialogFooter>
               <AlertDialogCancel @click="lastResult = 'cancelled'">Cancel</AlertDialogCancel>
-              <AlertDialogAction variant="destructive" @click="lastResult = 'deleted'">Delete</AlertDialogAction>
+              <AlertDialogAction variant="primary" @click="lastResult = 'deleted'">Confirm</AlertDialogAction>
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialog>
@@ -83,7 +83,7 @@ const controlledOpen = ref(false);
           <AlertDialogContent>
             <AlertDialogHeader>
               <AlertDialogIcon>
-                <LogOut class="size-icon"/>
+                <LogOut class="size-icon-extra-large"/>
               </AlertDialogIcon>
               <AlertDialogTitle>Sign out?</AlertDialogTitle>
               <AlertDialogDescription>You'll need to sign back in to access your workspace.</AlertDialogDescription>

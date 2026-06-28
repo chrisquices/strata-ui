@@ -1,11 +1,7 @@
-<script setup lang="ts">
-defineProps({
-  label: {default: undefined},
-});
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <div class="flex flex-col pt-2">
+  <div class="flex flex-col pt-cluster-small">
     <slot/>
   </div>
 </template>

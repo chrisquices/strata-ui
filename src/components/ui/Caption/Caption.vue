@@ -6,6 +6,7 @@ const allowedElements = ['span', 'div', 'p', 'dt', 'label', 'legend', 'figcaptio
 <script setup lang="ts">
 import type {PropType} from 'vue';
 import {computed} from 'vue';
+import {cn} from '../utils';
 
 const props = defineProps({
   tone: {
@@ -24,7 +25,7 @@ const props = defineProps({
 // render an arbitrary element.
 const renderedTag = computed(() => (allowedElements.includes(props.as) ? props.as : 'span'));
 
-const base = 'text-xs uppercase tracking-widest font-medium';
+const base = 'block text-xs uppercase tracking-widest font-medium';
 const toneClass = {
   faint: 'text-faint',
   muted: 'text-muted',
@@ -34,7 +35,7 @@ const toneClass = {
 </script>
 
 <template>
-  <component :is="renderedTag" :class="[base, toneClass[tone]]">
+  <component :is="renderedTag" :class="cn(base, toneClass[tone], $attrs.class)">
     <slot/>
   </component>
 </template>

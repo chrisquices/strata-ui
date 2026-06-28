@@ -100,8 +100,8 @@ const stateClass = computed(function () {
   return isGrouped.value
       ? ''
       : isInvalid.value
-          ? 'border-destructive focus-visible:ring-destructive/40'
-          : 'border-border hover:border-foreground/40 focus-visible:border-foreground focus-visible:ring-foreground/30';
+          ? 'border-destructive/90 focus-visible:ring-destructive/30'
+          : 'border-border hover:border-foreground/30 focus-visible:border-foreground/90 focus-visible:ring-foreground/30';
 });
 
 const isPassword = computed(function () {

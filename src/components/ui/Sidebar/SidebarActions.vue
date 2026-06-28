@@ -7,7 +7,7 @@ import SidebarHeader from './SidebarHeader.vue';
 <template>
   <SidebarHeader>
     <slot>
-      <div class="flex items-center gap-1 min-w-0">
+      <div class="flex items-center gap-cluster-small min-w-0">
         <Button variant="secondary" icon aria-label="New">
           <Plus class="size-icon"/>
         </Button>

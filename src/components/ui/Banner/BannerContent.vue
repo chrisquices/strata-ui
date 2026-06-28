@@ -2,6 +2,6 @@
 
 <template>
   <div class="flex-1 space-y-1">
-    <slot />
+    <slot/>
   </div>
 </template>

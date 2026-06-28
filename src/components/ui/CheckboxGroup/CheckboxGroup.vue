@@ -5,6 +5,7 @@
 import type {PropType} from 'vue';
 import {computed} from 'vue';
 import {CheckboxGroupRoot} from 'reka-ui';
+import {cn} from '../utils';
 
 const props = defineProps({
   disabled: {type: Boolean, default: false},
@@ -22,7 +23,7 @@ const props = defineProps({
 });
 const model = defineModel<(string | number)[]>();
 
-const layout = computed(() => (props.orientation === 'horizontal' ? 'flex flex-row flex-wrap gap-x-6 gap-y-2' : 'flex flex-col gap-4'));
+const layout = computed(() => (props.orientation === 'horizontal' ? 'flex flex-row flex-wrap gap-x-6 gap-y-cluster-small' : 'flex flex-col gap-cluster-large'));
 </script>
 
 <template>
@@ -34,7 +35,7 @@ const layout = computed(() => (props.orientation === 'horizontal' ? 'flex flex-r
       :orientation="orientation"
       :roving-focus="rovingFocus"
       :loop="loop"
-      :class="layout"
+      :class="cn(layout, $attrs.class)"
   >
     <slot/>
   </CheckboxGroupRoot>

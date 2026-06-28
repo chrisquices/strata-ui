@@ -6,6 +6,7 @@ import {Primitive} from 'reka-ui';
 import Collapsible from '../Collapsible/Collapsible.vue';
 import CollapsibleTrigger from '../Collapsible/CollapsibleTrigger.vue';
 import CollapsibleContent from '../Collapsible/CollapsibleContent.vue';
+import {cn} from '../utils';
 
 defineOptions({inheritAttrs: false});
 
@@ -17,27 +18,42 @@ const props = defineProps({
   type: {
     type: String as PropType<'button' | 'submit' | 'reset'>,
     default: 'button',
-    validator: (value: string) => ['button', 'submit', 'reset'].includes(value)
+    validator: function (value: string) {
+      return ['button', 'submit', 'reset'].includes(value);
+    },
   },
 });
 const open = defineModel<boolean>('open', {default: undefined});
 
 const attrs = useAttrs();
 const slots = useSlots();
-const hasSubmenu = computed(() => !!slots.submenu);
-const isLink = computed(() => !!props.href && !hasSubmenu.value);
-const isButton = computed(() => !isLink.value && !hasSubmenu.value);
+const forwardedAttrs = computed(function () {
+  const attributes = {...attrs};
+  delete attributes.class;
+  return attributes;
+});
+const hasSubmenu = computed(function () {
+  return !!slots.submenu;
+});
+const isLink = computed(function () {
+  return !!props.href && !hasSubmenu.value;
+});
+const isButton = computed(function () {
+  return !isLink.value && !hasSubmenu.value;
+});
 
 const base =
-    'strata-sidebar-menu-item group/sidebar-menu-item relative flex h-control w-full cursor-pointer items-center gap-2 px-4 text-left text-sm ' +
-    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-foreground/30 ' +
+    'strata-sidebar-menu-item group/sidebar-menu-item relative flex h-control w-full cursor-pointer items-center gap-cluster-small px-container text-left text-sm ' +
+    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-foreground/30' +
     'group-data-[collapsed]/sidebar:pl-5 group-data-[collapsed]/sidebar:pr-0 group-data-[collapsed]/sidebar:gap-0';
-const stateClass = computed(() =>
-    props.selected
-        ? 'bg-surface text-foreground'
-        : 'text-muted hover:bg-surface/60 hover:text-foreground'
-);
-const disabledClass = computed(() => (props.disabled ? 'pointer-events-none cursor-not-allowed opacity-50' : ''));
+const stateClass = computed(function () {
+  return props.selected
+      ? 'bg-hover/5 text-foreground'
+      : 'hover:bg-hover/5';
+});
+const disabledClass = computed(function () {
+  return props.disabled ? 'pointer-events-none cursor-not-allowed opacity-50' : '';
+});
 </script>
 
 <template>
@@ -45,14 +61,14 @@ const disabledClass = computed(() => (props.disabled ? 'pointer-events-none curs
     <Collapsible v-if="hasSubmenu" v-model:open="open" :default-open="defaultOpen">
       <CollapsibleTrigger as-child>
         <Primitive
-            v-bind="attrs"
+            v-bind="forwardedAttrs"
             as="button"
             :type="type"
             :disabled="disabled || undefined"
             :aria-current="selected ? 'page' : undefined"
             :data-active="selected || undefined"
             :data-disabled="disabled || undefined"
-            :class="[base, stateClass, disabledClass, 'group/collapsible']"
+            :class="cn(base, stateClass, disabledClass, 'group/collapsible', $attrs.class)"
         >
           <slot name="icon"/>
           <span
@@ -78,7 +94,7 @@ const disabledClass = computed(() => (props.disabled ? 'pointer-events-none curs
 
     <Primitive
         v-else
-        v-bind="attrs"
+        v-bind="forwardedAttrs"
         :as="isLink ? 'a' : 'button'"
         :href="isLink ? href : undefined"
         :type="isButton ? type : undefined"
@@ -87,7 +103,7 @@ const disabledClass = computed(() => (props.disabled ? 'pointer-events-none curs
         :aria-disabled="isLink && disabled ? 'true' : undefined"
         :data-active="selected || undefined"
         :data-disabled="disabled || undefined"
-        :class="[base, stateClass, disabledClass]"
+        :class="cn(base, stateClass, disabledClass, $attrs.class)"
     >
       <slot name="icon"/>
       <span

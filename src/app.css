@@ -1,10 +1,49 @@
 @import "tailwindcss";
 @source "./components/ui";
 
+@font-face {
+    font-family: 'Universal Sans';
+    src: url('./assets/fonts/universalsans/UniversalSansGX.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Universal Sans';
+    src: url('./assets/fonts/universalsans/UniversalSansItalicGX.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Universal Sans Display';
+    src: url('./assets/fonts/universalsans/UniversalSansDisplayGX.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Universal Sans Display';
+    src: url('./assets/fonts/universalsans/UniversalSansItalicDisplayGX.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+@layer base {
+    body {
+        font-weight: 300;
+    }
+}
+
 @theme {
 
     /* Typography */
-    --font-sans: ui-sans-serif, system-ui, sans-serif;
+    --font-sans: 'Universal Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Universal Sans Display', 'Universal Sans', ui-sans-serif, system-ui, sans-serif;
     --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
 
     /* For micro label text. */
@@ -12,27 +51,37 @@
     --text-2xs: 0.625rem;
 
     /* Colors */
-    --color-background: rgb(18, 18, 20);
-    --color-surface: rgba(28, 28, 31, 0.8);
-    --color-topbar: rgb(21, 21, 23);
-    --color-sidebar: rgba(21, 21, 23, 0.6);
+    --color-background: rgb(12 12 12); /* */
+    --color-foreground: rgb(249 249 249);
+
+    --color-topbar: rgb(24 24 24); /* */
+    --color-sidebar: rgb(24 24 24); /* */
+
+    --color-surface: rgb(27 26 26); /* */
+    --color-border: rgb(31, 34, 40);
+    --color-hover: rgb(249 249 249);
+
     --color-input: rgb(35, 35, 39);
-    --color-border: rgb(48, 48, 53);
-    --color-foreground: rgb(235, 235, 237);
-    --color-muted: rgb(157 157 166);
+    --color-input-border: rgb(52 52 52);
+
+    --color-muted: rgb(114 118 124); /* */
     --color-faint: rgb(101 101 108);
+
     --color-destructive: rgb(222, 78, 84);
     --color-destructive-foreground: rgb(255, 245, 245);
+
     --color-success: rgb(70, 188, 128);
     --color-success-foreground: rgb(12, 24, 18);
+
     --color-warning: rgb(228, 178, 76);
     --color-warning-foreground: rgb(28, 22, 8);
+
     --color-overlay: rgba(6, 6, 7, 0.7);
 
     /* Radius */
     --radius-small: 0.5rem;
-    --radius-medium: 1rem;
-    --radius-large: 2rem;
+    --radius-medium: 0.75rem;
+    --radius-large: 1rem;
 
     /* Border width */
     --border-width-small: 2px;
@@ -56,9 +105,9 @@
     --spacing-overlay-large: 2rem;
 
     /* For page and layout container padding. */
-    --spacing-container-small: 0.5rem;
-    --spacing-container: 1rem;
-    --spacing-container-large: 1.5rem;
+    --spacing-container-small: 1rem;
+    --spacing-container: 1.5rem;
+    --spacing-container-large: 2rem;
 
     /* For larger section-to-section rhythm. */
     --spacing-section-small: 1rem;
@@ -71,9 +120,9 @@
     --spacing-surface-large: 1.25rem;
 
     /* For spacing between stacked content blocks. */
-    --spacing-stack-small: 1rem;
-    --spacing-stack: 1.5rem;
-    --spacing-stack-large: 2rem;
+    --spacing-stack-small: 0.75rem;
+    --spacing-stack: 1.25rem;
+    --spacing-stack-large: 1.75rem;
 
     /* For spacing between related items in rows or groups. */
     --spacing-cluster-small: 0.5rem;
@@ -115,7 +164,7 @@
     --spacing-icon-small: 0.875rem;
     --spacing-icon: 1rem;
     --spacing-icon-large: 1.5rem;
-    --spacing-icon-extra-large: 2.5rem;
+    --spacing-icon-extra-large: 2rem;
 }
 
 :root {

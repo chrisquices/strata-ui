@@ -4,13 +4,17 @@ const allowedElements = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'div', 'span']
 </script>
 
 <script setup lang="ts">
-import type { PropType } from 'vue';
-import { computed } from 'vue';
+import type {PropType} from 'vue';
+import {computed} from 'vue';
 
 const props = defineProps({
-  as: { type: String as PropType<'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'div' | 'span'>, default: 'h3', validator: function (value: string) {
-    return allowedElements.includes(value);
-  } },
+  as: {
+    type: String as PropType<'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'div' | 'span'>,
+    default: 'h3',
+    validator: function (value: string) {
+      return allowedElements.includes(value);
+    }
+  },
 });
 
 const renderedTag = computed(function () {
@@ -20,6 +24,6 @@ const renderedTag = computed(function () {
 
 <template>
   <component :is="renderedTag" class="text-sm font-medium leading-snug">
-    <slot />
+    <slot/>
   </component>
 </template>

@@ -1,12 +1,23 @@
 <script setup lang="ts">
+import {computed, useAttrs} from 'vue';
 import {AccordionContent} from 'reka-ui';
+import {cn} from '../utils';
+
+defineOptions({inheritAttrs: false});
+
+const attrs = useAttrs();
+const forwardedAttrs = computed(function () {
+  const attributes = {...attrs};
+  delete attributes.class;
+  return attributes;
+});
 </script>
 
 <template>
-  <AccordionContent class="strata-accordion-content">
+  <AccordionContent v-bind="forwardedAttrs" class="strata-accordion-content">
 
     <!-- Keep padding inside the animated height wrapper so closed panels collapse to 0. -->
-    <div class="pb-stack text-sm text-muted">
+    <div :class="cn('pb-stack text-sm text-muted', $attrs.class)">
       <slot/>
     </div>
   </AccordionContent>

@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <span aria-hidden="true" class="mt-0.5 shrink-0">
-    <slot />
+  <span aria-hidden="true" class="shrink-0 flex items-center justify-center px-cluster-small">
+    <slot/>
   </span>
 </template>

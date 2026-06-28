@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center gap-4 border-t border-border px-card py-card">
+  <div class="flex items-center gap-cluster-large border-t border-border px-container py-container">
     <slot/>
   </div>
 </template>

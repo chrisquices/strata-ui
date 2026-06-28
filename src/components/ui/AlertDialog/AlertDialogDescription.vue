@@ -3,7 +3,7 @@ import {AlertDialogDescription} from 'reka-ui';
 </script>
 
 <template>
-  <AlertDialogDescription class="text-sm leading-tight text-muted px-overlay">
+  <AlertDialogDescription class="text-sm text-pretty text-muted px-overlay">
     <slot/>
   </AlertDialogDescription>
 </template>

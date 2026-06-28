@@ -51,7 +51,7 @@ const dismissed = ref(false);
       <ComponentItemSectionExample>
         <div class="flex flex-col gap-4">
           <Banner v-for="bannerVariant in variants" :key="bannerVariant.variant" :variant="bannerVariant.variant">
-            <BannerIcon><component :is="bannerVariant.icon" class="size-icon-small" /></BannerIcon>
+            <BannerIcon><component :is="bannerVariant.icon" class="size-icon-large" /></BannerIcon>
             <BannerContent>
               <BannerTitle>{{ bannerVariant.title }}</BannerTitle>
               <BannerDescription>{{ bannerVariant.description }}</BannerDescription>
@@ -70,14 +70,14 @@ const dismissed = ref(false);
       <ComponentItemSectionExample>
         <div class="flex flex-col gap-4">
           <Banner variant="warning" role="alert">
-            <BannerIcon><TriangleAlert class="size-icon-small" /></BannerIcon>
+            <BannerIcon><TriangleAlert class="size-icon-large" /></BannerIcon>
             <BannerContent>
               <BannerTitle>Session expires soon</BannerTitle>
               <BannerDescription>Save your work before continuing.</BannerDescription>
             </BannerContent>
           </Banner>
           <Banner role="none">
-            <BannerIcon><Info class="size-icon-small" /></BannerIcon>
+            <BannerIcon><Info class="size-icon-large" /></BannerIcon>
             <BannerContent>
               <BannerTitle as="p">Inline note</BannerTitle>
               <BannerDescription>This banner does not announce itself as live content.</BannerDescription>
@@ -99,7 +99,7 @@ const dismissed = ref(false);
             dismiss-label="Dismiss cookie notice"
             @dismiss="dismissed = true"
         >
-          <BannerIcon><Info class="size-icon-small" /></BannerIcon>
+          <BannerIcon><Info class="size-icon-large" /></BannerIcon>
           <BannerContent>
             <BannerTitle>Cookie notice</BannerTitle>
             <BannerDescription>We use cookies to improve your experience.</BannerDescription>

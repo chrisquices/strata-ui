@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import {AlertDialogTitle} from 'reka-ui';
 
-defineProps({as: {default: 'h2'}});
+const props = defineProps({as: {default: 'h2'}});
 </script>
 
 <template>
-  <AlertDialogTitle :as="as" class="text-base tracking-wide text-foreground">
+  <AlertDialogTitle :as="props.as" class="text-base text-foreground">
     <slot/>
   </AlertDialogTitle>
 </template>

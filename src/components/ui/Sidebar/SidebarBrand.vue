@@ -11,9 +11,9 @@ defineProps({
 
 <template>
   <SidebarHeader>
-    <div class="flex items-center gap-3 min-w-0">
+    <div class="flex items-center gap-cluster min-w-0">
       <span
-          class="inline-grid size-8 shrink-0 place-items-center rounded-medium border border-border bg-surface text-foreground"
+          class="inline-grid size-control-small shrink-0 place-items-center rounded-medium border border-border bg-surface text-foreground"
           aria-label="Strata" role="img">
         <Layers class="size-icon" aria-hidden="true"/>
       </span>

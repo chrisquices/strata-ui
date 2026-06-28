@@ -1,7 +1,10 @@
 <script setup lang="ts">
-import type { PropType } from 'vue';
-import { computed, provide, ref } from 'vue';
-import { X } from '@lucide/vue';
+import type {PropType} from 'vue';
+import {computed, provide, ref, useAttrs} from 'vue';
+import {X} from '@lucide/vue';
+import {cn} from '../utils';
+
+defineOptions({inheritAttrs: false});
 
 const props = defineProps({
   variant: {
@@ -18,11 +21,12 @@ const props = defineProps({
       return ['status', 'alert', 'none'].includes(value);
     },
   },
-  dismissible: { type: Boolean, default: false },
-  dismissLabel: { type: String, default: 'Dismiss' },
+  dismissible: {type: Boolean, default: false},
+  dismissLabel: {type: String, default: 'Dismiss'},
 });
 
 const emit = defineEmits<{ dismiss: [] }>();
+
 const visible = ref(true);
 
 const variantClass = {
@@ -31,8 +35,17 @@ const variantClass = {
   warning: 'border-warning/30 bg-warning/5 text-warning',
   destructive: 'border-destructive/30 bg-destructive/5 text-destructive',
 };
+
 const cls = computed(function () {
   return variantClass[props.variant] ?? variantClass.secondary;
+});
+
+const attrs = useAttrs();
+
+const forwardedAttrs = computed(function () {
+  const attributes = {...attrs};
+  delete attributes.class;
+  return attributes;
 });
 
 provide('bannerVariant', computed(function () {
@@ -47,16 +60,17 @@ function dismiss() {
 
 <template>
   <Transition name="strata-banner" appear @after-leave="emit('dismiss')">
-    <div v-if="visible" :role="role === 'none' ? undefined : role" :class="['flex gap-3 rounded-large border p-4', cls]">
-      <slot />
+    <div v-if="visible" v-bind="forwardedAttrs" :role="role === 'none' ? undefined : role"
+         :class="cn('flex gap-cluster rounded-medium border p-surface', cls, $attrs.class)">
+      <slot/>
       <button
-        v-if="dismissible"
-        type="button"
-        :aria-label="dismissLabel"
-        class="-m-1.5 grid size-8 shrink-0 place-items-center self-start rounded-small opacity-70 transition-opacity duration-100 hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/30"
-        @click="dismiss"
+          v-if="dismissible"
+          type="button"
+          :aria-label="dismissLabel"
+          class="-m-1.5 grid size-8 shrink-0 place-items-center self-start rounded-small opacity-70 transition-opacity duration-100 hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/30"
+          @click="dismiss"
       >
-        <X class="size-icon-small" aria-hidden="true" />
+        <X class="size-icon-small" aria-hidden="true"/>
       </button>
     </div>
   </Transition>

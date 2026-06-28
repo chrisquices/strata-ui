@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { computed, inject } from 'vue';
+import {computed, inject} from 'vue';
 
 // Tint follows the banner: muted on the default variant, inherits the variant color otherwise.
 const variant = inject('bannerVariant', null);
+
 const toneClass = computed(function () {
   return (variant?.value ?? 'secondary') === 'secondary' ? 'text-muted' : '';
 });
@@ -10,6 +11,6 @@ const toneClass = computed(function () {
 
 <template>
   <p :class="['text-xs', toneClass]">
-    <slot />
+    <slot/>
   </p>
 </template>

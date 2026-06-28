@@ -1,22 +1,29 @@
 <script setup lang="ts">
 import type {PropType} from 'vue';
 import {computed} from 'vue';
+import {cn} from '../utils';
 
 const props = defineProps({
   variant: {
     type: String as PropType<'primary' | 'secondary' | 'ghost' | 'destructive' | 'success' | 'warning'>,
     default: 'primary',
-    validator: (value: string) => ['primary', 'secondary', 'ghost', 'destructive', 'success', 'warning'].includes(value),
+    validator: function (value: string) {
+      return ['primary', 'secondary', 'ghost', 'destructive', 'success', 'warning'].includes(value);
+    },
   },
   size: {
     type: String as PropType<'sm' | 'md' | 'lg'>,
     default: 'md',
-    validator: (value: string) => ['sm', 'md', 'lg'].includes(value)
+    validator: function (value: string) {
+      return ['sm', 'md', 'lg'].includes(value);
+    },
   },
   radius: {
     type: String as PropType<'sm' | 'md' | 'lg' | 'full'>,
     default: 'md',
-    validator: (value: string) => ['sm', 'md', 'lg', 'full'].includes(value)
+    validator: function (value: string) {
+      return ['sm', 'md', 'lg', 'full'].includes(value);
+    },
   },
   outline: {type: Boolean, default: false},
   dot: {type: Boolean, default: false},
@@ -28,11 +35,13 @@ const base =
     'inline-flex justify-center max-w-full items-center overflow-hidden font-medium whitespace-nowrap uppercase tracking-widest tabular-nums';
 
 const radiusClasses = {sm: 'rounded-small', md: 'rounded-medium', lg: 'rounded-large', full: 'rounded-full'};
+
 const sizeText = {
   sm: 'h-tag-small px-tag-x text-2xs',
   md: 'h-tag px-tag-x text-xs',
   lg: 'h-tag-large px-tag-x text-sm',
 };
+
 // Filled mirrors Button's resting state — Button's hover-only fills are dropped,
 // since a badge has no hover. Ghost therefore stays transparent, like Button at rest.
 const filled = {
@@ -43,6 +52,7 @@ const filled = {
   success: 'bg-success text-success-foreground',
   warning: 'bg-warning text-warning-foreground',
 };
+
 const outlined = {
   primary: 'bg-transparent text-foreground border border-foreground',
   secondary: 'bg-transparent text-foreground border border-border',
@@ -53,6 +63,7 @@ const outlined = {
   success: 'bg-transparent text-success border border-success',
   warning: 'bg-transparent text-warning border border-warning',
 };
+
 // Dot colors contrast the badge background: dotFilled shows on the solid/tinted
 // fill; dotOutlined uses the variant accent against the transparent outline.
 const dotFilled = {
@@ -63,6 +74,7 @@ const dotFilled = {
   success: 'bg-success-foreground',
   warning: 'bg-warning-foreground',
 };
+
 const dotOutlined = {
   primary: 'bg-foreground',
   secondary: 'bg-foreground',
@@ -72,15 +84,26 @@ const dotOutlined = {
   warning: 'bg-warning',
 };
 
-const variantClass = computed(() => (props.outline ? outlined[props.variant] : filled[props.variant]));
-const sizeClass = computed(() => sizeText[props.size]);
-const radiusClass = computed(() => radiusClasses[props.radius]);
-const dotColor = computed(() => (props.outline ? dotOutlined[props.variant] : dotFilled[props.variant]));
+const variantClass = computed(function () {
+  return props.outline ? outlined[props.variant] : filled[props.variant];
+});
+
+const sizeClass = computed(function () {
+  return sizeText[props.size];
+});
+
+const radiusClass = computed(function () {
+  return radiusClasses[props.radius];
+});
+
+const dotColor = computed(function () {
+  return props.outline ? dotOutlined[props.variant] : dotFilled[props.variant];
+});
 </script>
 
 <template>
-  <span :class="[base, variantClass, sizeClass, radiusClass]">
-    <span :class="['inline-flex min-w-0 items-center gap-2']">
+  <span :class="cn(base, variantClass, sizeClass, radiusClass, $attrs.class)">
+    <span class="inline-flex min-w-0 items-center gap-2">
       <span v-if="dot" :class="['size-1.5 shrink-0 rounded-full', dotColor]" aria-hidden="true"></span>
       <span class="min-w-0 truncate"><slot/></span>
     </span>

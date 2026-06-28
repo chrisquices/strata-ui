@@ -2,7 +2,7 @@
 import type {PropType} from 'vue';
 import {AccordionRoot} from 'reka-ui';
 
-defineProps({
+const props = defineProps({
   type: {
     type: String as PropType<'single' | 'multiple'>,
     default: 'single',
@@ -23,11 +23,11 @@ const model = defineModel<string | string[]>();
   <AccordionRoot
       v-slot="{ modelValue }"
       v-model="model"
-      :type="type"
-      :collapsible="collapsible"
-      :default-value="defaultValue"
-      :disabled="disabled"
-      :unmount-on-hide="unmountOnHide"
+      :type="props.type"
+      :collapsible="props.collapsible"
+      :default-value="props.defaultValue"
+      :disabled="props.disabled"
+      :unmount-on-hide="props.unmountOnHide"
   >
     <slot :model-value="modelValue"/>
   </AccordionRoot>

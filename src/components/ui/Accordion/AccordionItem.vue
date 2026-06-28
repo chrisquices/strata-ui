@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {AccordionItem} from 'reka-ui';
 
-defineProps({
+const props = defineProps({
   value: {type: String, required: true},
   disabled: {type: Boolean, default: false},
   unmountOnHide: {type: Boolean, default: undefined},
@@ -11,9 +11,9 @@ defineProps({
 <template>
   <AccordionItem
       v-slot="{ open }"
-      :value="value"
-      :disabled="disabled"
-      :unmount-on-hide="unmountOnHide"
+      :value="props.value"
+      :disabled="props.disabled"
+      :unmount-on-hide="props.unmountOnHide"
       class="border-b border-border"
   >
     <slot :open="open"/>

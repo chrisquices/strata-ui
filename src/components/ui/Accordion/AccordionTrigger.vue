@@ -1,6 +1,5 @@
+<!-- Module scope: defineProps is hoisted and cannot see <script setup> consts. -->
 <script lang="ts">
-
-// Module scope: defineProps is hoisted and can't see <script setup> consts.
 const LEVELS = [1, 2, 3, 4, 5, 6];
 </script>
 
@@ -13,6 +12,9 @@ import {
   injectAccordionItemContext,
 } from 'reka-ui';
 import {ChevronDown} from '@lucide/vue';
+import {cn} from '../utils';
+
+defineOptions({inheritAttrs: false});
 
 const props = defineProps({
   level: {
@@ -41,8 +43,9 @@ const triggerAriaDisabled = computed(function () {
 <template>
   <RekaAccordionHeader :as="headingTag" class="flex">
     <RekaAccordionTrigger
+        v-bind="$attrs"
         :aria-disabled="triggerAriaDisabled"
-        class="group flex flex-1 items-center justify-between gap-cluster py-stack text-sm font-medium text-muted transition-colors duration-200 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/30 focus-visible:ring-offset-2 focus-visible:ring-offset-background data-[state=open]:text-foreground data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50"
+        :class="cn('group flex flex-1 items-center justify-between gap-cluster py-stack text-sm font-medium text-muted transition-colors duration-200 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/30 focus-visible:ring-offset-2 focus-visible:ring-offset-background data-[state=open]:text-foreground data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50', $attrs.class)"
     >
       <span class="text-start"><slot/></span>
       <ChevronDown

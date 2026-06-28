@@ -34,7 +34,7 @@ const variants = ['primary', 'secondary', 'ghost', 'destructive', 'success', 'wa
       <ComponentItemSectionTitle>Filled</ComponentItemSectionTitle>
       <ComponentItemSectionDescription>Filled badges use the variant color as the badge background.</ComponentItemSectionDescription>
       <ComponentItemSectionExample>
-        <div class="flex flex-wrap items-center gap-3">
+        <div class="flex flex-wrap items-center gap-4">
           <Badge v-for="variant in variants" :key="variant" :variant="variant">{{ variant }}</Badge>
         </div>
       </ComponentItemSectionExample>
@@ -45,7 +45,7 @@ const variants = ['primary', 'secondary', 'ghost', 'destructive', 'success', 'wa
       <ComponentItemSectionTitle>Outline</ComponentItemSectionTitle>
       <ComponentItemSectionDescription>Outline badges keep the surface clear while preserving the variant tone.</ComponentItemSectionDescription>
       <ComponentItemSectionExample>
-        <div class="flex flex-wrap items-center gap-3">
+        <div class="flex flex-wrap items-center gap-4">
           <Badge v-for="variant in variants" :key="variant" :variant="variant" outline>{{ variant }}</Badge>
         </div>
       </ComponentItemSectionExample>
@@ -56,7 +56,7 @@ const variants = ['primary', 'secondary', 'ghost', 'destructive', 'success', 'wa
       <ComponentItemSectionTitle>Sizes</ComponentItemSectionTitle>
       <ComponentItemSectionDescription>Size changes the label height, padding, and text scale.</ComponentItemSectionDescription>
       <ComponentItemSectionExample>
-        <div class="flex flex-wrap items-center gap-3">
+        <div class="flex flex-wrap items-center gap-4">
           <Badge size="sm">Small</Badge>
           <Badge size="md">Medium</Badge>
           <Badge size="lg">Large</Badge>
@@ -69,7 +69,7 @@ const variants = ['primary', 'secondary', 'ghost', 'destructive', 'success', 'wa
       <ComponentItemSectionTitle>Radius</ComponentItemSectionTitle>
       <ComponentItemSectionDescription>sm / md / lg, or full (pill), matching Button.</ComponentItemSectionDescription>
       <ComponentItemSectionExample>
-        <div class="flex flex-wrap items-center gap-3">
+        <div class="flex flex-wrap items-center gap-4">
           <Badge radius="sm">Small</Badge>
           <Badge radius="md">Medium</Badge>
           <Badge radius="lg">Large</Badge>
@@ -83,7 +83,7 @@ const variants = ['primary', 'secondary', 'ghost', 'destructive', 'success', 'wa
       <ComponentItemSectionTitle>With dot</ComponentItemSectionTitle>
       <ComponentItemSectionDescription>The dot color is chosen to contrast with the badge background.</ComponentItemSectionDescription>
       <ComponentItemSectionExample>
-        <div class="flex flex-wrap items-center gap-3">
+        <div class="flex flex-wrap items-center gap-4">
           <Badge variant="success" dot>Active</Badge>
           <Badge variant="warning" dot>Pending</Badge>
           <Badge variant="destructive" dot>Failed</Badge>

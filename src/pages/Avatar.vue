@@ -13,28 +13,23 @@ import ComponentItemSectionTitle from '@app/component/ComponentItemSectionTitle.
 import ComponentItemSectionDescription from '@app/component/ComponentItemSectionDescription.vue';
 import ComponentItemSectionExample from '@app/component/ComponentItemSectionExample.vue';
 
-function getPicsumImageSource(id: number) {
-  return `https://picsum.photos/id/${id}/96/96`;
-}
+const logoImage = '/assets/Logos.png';
 
 const team = [
-  { name: 'Ada Lovelace', src: getPicsumImageSource(64) },
-  { name: 'Grace Hopper', src: getPicsumImageSource(65) },
+  { name: 'Ada Lovelace', src: logoImage },
+  { name: 'Grace Hopper', src: logoImage },
   { name: 'Alan Turing' },
-  { name: 'Katherine Johnson', src: getPicsumImageSource(91) },
+  { name: 'Katherine Johnson', src: logoImage },
   { name: 'Edsger Dijkstra' },
-  { name: 'Barbara Liskov', src: getPicsumImageSource(1027) },
+  { name: 'Barbara Liskov', src: logoImage },
 ];
 </script>
 
 <template>
-
   <!-- Header -->
   <ComponentHeader>
-
     <!-- Title -->
     <ComponentHeaderTitle>Avatar</ComponentHeaderTitle>
-
     <!-- Description -->
     <ComponentHeaderDescription>
       A user image with an initials fallback while it loads or when no image is set. Stack several with AvatarGroup.
@@ -42,56 +37,56 @@ const team = [
   </ComponentHeader>
 
   <ComponentContent>
+    <!-- Image and fallback -->
+    <ComponentItemSection>
+      <ComponentItemSectionTitle>Image and fallback</ComponentItemSectionTitle>
+      <ComponentItemSectionDescription>With a valid image; and initials when there's no image.</ComponentItemSectionDescription>
+      <ComponentItemSectionExample>
+        <div class="flex items-center gap-4">
+          <Avatar>
+            <AvatarImage :src="logoImage" alt="Masso Beats logo" />
+            <AvatarFallback>AL</AvatarFallback>
+          </Avatar>
+          <Avatar>
+            <AvatarFallback>GH</AvatarFallback>
+          </Avatar>
+        </div>
+      </ComponentItemSectionExample>
+    </ComponentItemSection>
 
-  <!-- Image and fallback -->
-  <ComponentItemSection>
-    <ComponentItemSectionTitle>Image and fallback</ComponentItemSectionTitle>
-    <ComponentItemSectionDescription>With a valid image; and initials when there's no image.</ComponentItemSectionDescription>
-    <ComponentItemSectionExample>
-      <div class="flex items-center gap-4">
-        <Avatar>
-          <AvatarImage :src="getPicsumImageSource(64)" alt="Ada Lovelace" />
-          <AvatarFallback>AL</AvatarFallback>
-        </Avatar>
-        <Avatar>
-          <AvatarFallback>GH</AvatarFallback>
-        </Avatar>
-      </div>
-    </ComponentItemSectionExample>
-  </ComponentItemSection>
+    <!-- Sizes -->
+    <ComponentItemSection>
+      <ComponentItemSectionTitle>Sizes</ComponentItemSectionTitle>
+      <ComponentItemSectionDescription>Small, medium, and large sizes keep image and fallback content centered.</ComponentItemSectionDescription>
+      <ComponentItemSectionExample>
+        <div class="flex items-center gap-4">
+          <Avatar size="sm">
+            <AvatarImage :src="logoImage" alt="Small avatar" />
+            <AvatarFallback>SM</AvatarFallback>
+          </Avatar>
+          <Avatar size="md">
+            <AvatarImage :src="logoImage" alt="Medium avatar" />
+            <AvatarFallback>MD</AvatarFallback>
+          </Avatar>
+          <Avatar size="lg">
+            <AvatarImage :src="logoImage" alt="Large avatar" />
+            <AvatarFallback>LG</AvatarFallback>
+          </Avatar>
+        </div>
+      </ComponentItemSectionExample>
+    </ComponentItemSection>
 
-  <!-- Sizes -->
-  <ComponentItemSection>
-    <ComponentItemSectionTitle>Sizes</ComponentItemSectionTitle>
-    <ComponentItemSectionDescription>Small, medium, and large sizes keep image and fallback content centered.</ComponentItemSectionDescription>
-    <ComponentItemSectionExample>
-      <div class="flex items-center gap-4">
-        <Avatar size="sm">
-          <AvatarImage :src="getPicsumImageSource(177)" alt="Small avatar" />
-          <AvatarFallback>SM</AvatarFallback>
-        </Avatar>
-        <Avatar size="md">
-          <AvatarImage :src="getPicsumImageSource(342)" alt="Medium avatar" />
-          <AvatarFallback>MD</AvatarFallback>
-        </Avatar>
-        <Avatar size="lg">
-          <AvatarImage :src="getPicsumImageSource(433)" alt="Large avatar" />
-          <AvatarFallback>LG</AvatarFallback>
-        </Avatar>
-      </div>
-    </ComponentItemSectionExample>
-  </ComponentItemSection>
-
-  <!-- Group -->
-  <ComponentItemSection>
-    <ComponentItemSectionTitle>Group</ComponentItemSectionTitle>
-    <ComponentItemSectionDescription>Overlapping stack capped with max; extras collapse into a +N tile.</ComponentItemSectionDescription>
-    <ComponentItemSectionExample>
-      <div class="flex flex-col gap-4">
-        <AvatarGroup :items="team" :max="4" />
-        <AvatarGroup :items="team" :max="0" size="md" />
-      </div>
-    </ComponentItemSectionExample>
-  </ComponentItemSection>
+    <!-- Group -->
+    <ComponentItemSection>
+      <ComponentItemSectionTitle>Group</ComponentItemSectionTitle>
+      <ComponentItemSectionDescription>Overlapping stack capped with max; extras collapse into a +N tile.</ComponentItemSectionDescription>
+      <ComponentItemSectionExample>
+        <div class="flex flex-col gap-4">
+          <AvatarGroup :items="team" :max="4" size="sm" />
+          <AvatarGroup :items="team" :max="4" size="md" />
+          <AvatarGroup :items="team" :max="4" size="lg" />
+        </div>
+      </ComponentItemSectionExample>
+    </ComponentItemSection>
   </ComponentContent>
 </template>

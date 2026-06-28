@@ -9,7 +9,7 @@ defineProps({
   },
 });
 const base =
-    'inline-flex items-center gap-1.5 rounded-small text-muted transition-colors duration-100 ' +
+    'inline-flex items-center gap-cluster-small rounded-small text-muted transition-colors duration-100 ' +
     'hover:text-foreground focus-visible:outline-none focus-visible:text-foreground ' +
     'focus-visible:ring-2 focus-visible:ring-foreground/30 focus-visible:ring-offset-2 focus-visible:ring-offset-background';
 </script>

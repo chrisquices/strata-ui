@@ -3,7 +3,8 @@ import {AlertDialogTrigger} from 'reka-ui';
 import Button from '../Button/Button.vue';
 
 defineOptions({inheritAttrs: false});
-defineProps({
+
+const props = defineProps({
   variant: {type: String, default: 'secondary'},
   outline: {type: Boolean, default: false},
   size: {type: String, default: 'md'},
@@ -12,7 +13,7 @@ defineProps({
 
 <template>
   <AlertDialogTrigger as-child>
-    <Button v-bind="$attrs" :variant="variant" :outline="outline" :size="size">
+    <Button v-bind="$attrs" :variant="props.variant" :outline="props.outline" :size="props.size">
       <slot/>
     </Button>
   </AlertDialogTrigger>
